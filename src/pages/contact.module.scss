@@ -31,4 +31,11 @@
 .form {
   display: flex;
   flex-direction: column;
+
+  input {
+    border-radius: 8px;
+  }
+  textarea {
+    border-radius: 8px;
+  }
 }

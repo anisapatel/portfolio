@@ -10,6 +10,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 const Contact = () => {
+  const handleSubmit = event => {
+    event.preventDefault()
+  }
   return (
     <Layout>
       <Head title="Contact" />
@@ -17,10 +20,10 @@ const Contact = () => {
       <form
         name="contact"
         method="POST"
-        action="/"
         className={contactStyles.form}
         data-netlify="true"
         netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
       >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
