@@ -15,6 +15,9 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "gatsby": "^2.23.10",
     "gatsby-plugin-react-helmet": "^3.3.9",
     "gatsby-plugin-sass": "^2.3.7",
