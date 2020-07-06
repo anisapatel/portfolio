@@ -13,7 +13,57 @@ const Contact = () => {
   return (
     <Layout>
       <Head title="Contact" />
-      <h1>Contact me.</h1>
+      <h1>Get in touch</h1>
+      <form
+        name="contact"
+        method="POST"
+        action="#"
+        className={contactStyles.form}
+        data-netlify="true"
+      >
+        <label for="name">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            placeholder="Name"
+          ></input>
+        </label>
+
+        <label for="email">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="E-mail"
+          ></input>
+        </label>
+
+        <label for="subject">
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            required
+            placeholder="Subject"
+          ></input>
+        </label>
+
+        <label for="message">
+          <textarea
+            type="text"
+            name="message"
+            id="message"
+            rows="5"
+            required
+            placeholder="Message"
+          ></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+
       <div className={contactStyles.social}>
         <a
           href="https://github.com/anisapatel"
