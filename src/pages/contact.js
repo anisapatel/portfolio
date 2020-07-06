@@ -17,10 +17,13 @@ const Contact = () => {
       <form
         name="contact"
         method="POST"
-        action="#"
+        action="/"
         className={contactStyles.form}
         data-netlify="true"
+        netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <label for="name">
           <input
             type="text"
