@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import contactStyles from "../pages/contact.module.scss"
@@ -10,9 +10,33 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 const Contact = () => {
+  const [formState, setFormState] = useState([
+    { name: "", email: "", subject: "", message: "" },
+  ])
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+  const handleChange = event => {
+    setFormState({ ...formState, [event.target.name]: event.target.value })
+  }
+
   const handleSubmit = event => {
+    const form = event.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...formState,
+      }),
+    })
+      .then(() => alert("success"))
+      .catch(error => alert(error))
     event.preventDefault()
   }
+
   return (
     <Layout>
       <Head title="Contact" />
@@ -20,44 +44,51 @@ const Contact = () => {
       <form
         name="contact"
         method="POST"
+        action="/"
         className={contactStyles.form}
         data-netlify="true"
         netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
       >
         <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="contact" />
-        <label for="name">
+        <input type="hidden" name="contact" value="contact" />
+        <label htmlFor="name">
           <input
             type="text"
             name="name"
             id="name"
             required
             placeholder="Name"
+            onChange={handleChange}
+            value={formState.name}
           ></input>
         </label>
 
-        <label for="email">
+        <label htmlFor="email">
           <input
             type="email"
             name="email"
             id="email"
             required
             placeholder="E-mail"
+            onChange={handleChange}
+            value={formState.email}
           ></input>
         </label>
 
-        <label for="subject">
+        <label htmlFor="subject">
           <input
             type="text"
             name="subject"
             id="subject"
             required
             placeholder="Subject"
+            onChange={handleChange}
+            value={formState.subject}
           ></input>
         </label>
 
-        <label for="message">
+        <label htmlFor="message">
           <textarea
             type="text"
             name="message"
@@ -65,6 +96,8 @@ const Contact = () => {
             rows="5"
             required
             placeholder="Message"
+            onChange={handleChange}
+            value={formState.message}
           ></textarea>
         </label>
         <button type="submit">Submit</button>
