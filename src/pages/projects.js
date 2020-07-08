@@ -20,7 +20,7 @@ const Projects = () => {
             url
             stack
             image {
-              fluid(maxWidth: 500) {
+              fluid {
                 ...GatsbyContentfulFluid_withWebp
               }
             }
@@ -36,7 +36,6 @@ const Projects = () => {
       <section className="section projects">
         <div className="section-center projects-center">
           {data.allContentfulProjects.edges.map((project, index) => {
-            console.log(project)
             return (
               <Project key={project.node.id} index={index} {...project.node} />
             )
