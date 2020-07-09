@@ -66,3 +66,25 @@
 //     </a>
 //   </article>
 // </section>
+
+// .container {
+//     margin: 0 auto;
+//     // max-width: 750px;
+//     padding: 1rem;
+
+//     // display: flex;
+//     // flex-direction: column;
+//     min-height: 100vh;
+//     // background-color: #f1f5f8;
+
+//     font-family: var(--ff-secondary);
+//     background: var(--clr-white);
+//     color: var(--clr-grey-1);
+//     line-height: 1.5;
+//     font-size: 0.875rem;
+//   }
+
+//   .content {
+//     // flex-grow: 1;
+//     // background-color: #f1f5f8;
+//   }

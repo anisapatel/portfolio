@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import blogStyles from "../pages/blog.module.scss"
 import Head from "../components/head"
+import Blogs from "../components/blogs"
 
-const BlogPage = () => {
+const BlogsPage = () => {
   // tagged template literal so you can useStaticQuery to query the graphql api
   const data = useStaticQuery(graphql`
     query {
@@ -12,8 +13,14 @@ const BlogPage = () => {
         edges {
           node {
             title
+            id
             slug
             publishedDate(formatString: "MMMM DD YYYY")
+            blogImage {
+              fluid {
+                ...GatsbyContentfulFluid_withWebp
+              }
+            }
           }
         }
       }
@@ -23,20 +30,15 @@ const BlogPage = () => {
     <Layout>
       <Head title="Blog" />
       <h1>Blog</h1>
-      <ol className={blogStyles.posts}>
-        {data.allContentfulBlogPost.edges.map((item, index) => {
-          return (
-            <li key={index} className={blogStyles.post}>
-              <Link to={`/blog/${item.node.slug}`}>
-                <h2>{item.node.title}</h2>
-                <p>{item.node.publishedDate}</p>
-              </Link>
-            </li>
-          )
-        })}
-      </ol>
+      <section className={blogStyles.section}>
+        <div className={blogStyles.sectionCenter}>
+          {data.allContentfulBlogPost.edges.map((item, index) => {
+            return <Blogs key={item.node.id} index={index} {...item.node} />
+          })}
+        </div>
+      </section>
     </Layout>
   )
 }
 
-export default BlogPage
+export default BlogsPage

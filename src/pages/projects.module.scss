@@ -1,26 +1,18 @@
-// .tiles {
-//   padding-left: 30px;
-//   padding-right: 30px;
-//   transition-timing-function: ease;
-//   transition-duration: 0.5s;
-//   display: flex;
-//   flex-wrap: wrap;
-//   position: relative;
+.projects {
+  //   background: var(--clr-grey-10);
+}
 
-//   article {
-//     position: relative;
-//     width: 33%;
+.section {
+  padding: 2rem 0;
+}
 
-//     .image {
-//       position: relative;
-//       display: block;
-//       width: 100%;
-//       border-radius: _size(border-radius);
-//       overflow: hidden;
-//     }
-//     img {
-//       display: block;
-//       width: 100%;
-//     }
-//   }
-// }
+.sectionCenter {
+  width: 95vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .sectionCenter {
+    width: 95vw;
+  }
+}

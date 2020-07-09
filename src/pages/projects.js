@@ -33,8 +33,8 @@ const Projects = () => {
     <Layout>
       <Head title="Projects" />
       <h1>Projects</h1>
-      <section className="section projects">
-        <div className="section-center projects-center">
+      <section className={projectsStyles.section}>
+        <div className={projectsStyles.sectionCenter}>
           {data.allContentfulProjects.edges.map((project, index) => {
             return (
               <Project key={project.node.id} index={index} {...project.node} />
