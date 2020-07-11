@@ -1,5 +1,7 @@
 .container {
-  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 5rem 0;
 }
 
 .social {
@@ -29,13 +31,74 @@
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  width: 90vw;
+  max-width: 35rem;
+  outline: solid 1px;
 
   input {
-    border-radius: 8px;
+    display: block;
+    width: 100%;
+    // padding: 0.75rem 1rem;
+    border: none;
+    margin-bottom: 1.25rem;
+    background: var(--clr-grey-10);
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    outline: solid 0.5px;
   }
   textarea {
-    border-radius: 8px;
+    display: block;
+    width: 100%;
+    // padding: 0.75rem 1rem;
+    border: none;
+    margin-bottom: 1.25rem;
+    background: var(--clr-grey-10);
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    outline: solid 0.5px;
   }
+
+  textarea::placeholder {
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-1);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+  }
+
+  input::placeholder {
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-1);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+  }
+}
+
+.formFields {
+  // padding: 1rem 1.5rem;
+  outline: solid 1px;
+}
+.form:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.form h3 {
+  padding-top: 1.25rem;
+  color: var(--clr-grey-5);
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }

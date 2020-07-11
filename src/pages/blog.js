@@ -31,7 +31,7 @@ const BlogsPage = () => {
       <Head title="Blog" />
       <h1>Blog</h1>
       <section className={blogStyles.section}>
-        <div className={blogStyles.sectionCenter}>
+        <div className={(blogStyles.sectionCenter, blogStyles.blogsCenter)}>
           {data.allContentfulBlogPost.edges.map((item, index) => {
             return <Blogs key={item.node.id} index={index} {...item.node} />
           })}

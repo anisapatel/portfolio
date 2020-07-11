@@ -8,6 +8,7 @@
   border-top-right-radius: var(--radius);
   height: 19rem;
   z-index: 1;
+  outline: solid grey;
 }
 .projectImg ::after {
   content: "";
@@ -27,6 +28,7 @@
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
   //   background-color: grey;
+  outline: solid grey;
 }
 
 .projectNumber {
@@ -86,6 +88,7 @@
     height: 30rem;
     border-radius: var(--radius);
     box-shadow: var(--dark-shadow);
+    outline: solid grey;
   }
   .projectInfo {
     border-radius: var(--radius);
@@ -94,6 +97,7 @@
     z-index: 1;
     grid-column: 5 /12;
     grid-row: 1 / 1;
+    outline: solid grey;
   }
   .project:nth-of-type(even) .projectImg {
     grid-column: 5 / -1;

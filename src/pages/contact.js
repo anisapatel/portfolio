@@ -40,67 +40,72 @@ const Contact = () => {
   return (
     <Layout>
       <Head title="Contact" />
-      <h1>Get in touch</h1>
-      <form
-        name="contact"
-        method="POST"
-        className={contactStyles.form}
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit}
-      >
-        <input type="hidden" name="bot-field" />
-        <input type="hidden" name="contact" value="contact" />
-        <label htmlFor="name">
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            placeholder="Name"
-            onChange={handleChange}
-            value={formState.name}
-          ></input>
-        </label>
+      <section className={contactStyles.container}>
+        <article className={contactStyles.form}>
+          <h3>Get in touch</h3>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            <div className={contactStyles.formFields}>
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="contact" value="contact" />
+              <label htmlFor="name">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  placeholder="Name"
+                  onChange={handleChange}
+                  value={formState.name}
+                ></input>
+              </label>
 
-        <label htmlFor="email">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            placeholder="E-mail"
-            onChange={handleChange}
-            value={formState.email}
-          ></input>
-        </label>
+              <label htmlFor="email">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="E-mail"
+                  onChange={handleChange}
+                  value={formState.email}
+                ></input>
+              </label>
 
-        <label htmlFor="subject">
-          <input
-            type="text"
-            name="subject"
-            id="subject"
-            required
-            placeholder="Subject"
-            onChange={handleChange}
-            value={formState.subject}
-          ></input>
-        </label>
+              <label htmlFor="subject">
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  required
+                  placeholder="Subject"
+                  onChange={handleChange}
+                  value={formState.subject}
+                ></input>
+              </label>
 
-        <label htmlFor="message">
-          <textarea
-            type="text"
-            name="message"
-            id="message"
-            rows="5"
-            required
-            placeholder="Message"
-            onChange={handleChange}
-            value={formState.message}
-          ></textarea>
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+              <label htmlFor="message">
+                <textarea
+                  type="text"
+                  name="message"
+                  id="message"
+                  rows="5"
+                  required
+                  placeholder="Message"
+                  onChange={handleChange}
+                  value={formState.message}
+                ></textarea>
+              </label>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </article>
+      </section>
 
       <div className={contactStyles.social}>
         <a

@@ -9,7 +9,7 @@ const BlogPage = ({ title, slug, publishedDate, blogImage, id }) => {
       <article>
         <Image fluid={blogImage.fluid} className={blogsStyles.blogImg} />
         <div className={blogsStyles.blogCard}>
-          <h2>{title}</h2>
+          <h4>{title}</h4>
           <div className={blogsStyles.blogFooter}>
             <p>{slug}</p>
             <p>{publishedDate}</p>
