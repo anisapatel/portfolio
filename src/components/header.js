@@ -1,10 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { FaBars, FaTimes } from "react-icons/fa"
 
 //import "./header.module.scss"
 import headerStyles from "./header.module.scss"
 
 const Header = () => {
+  const [isOpen, setOpen] = useState(false)
+  const activeNavItem = headerStyles.activeNavItem
+  const navItem = headerStyles.navItem
+  const navClassNames = isOpen ? activeNavItem : navItem
+  console.log(isOpen, "<--isOpen", navClassNames, "<--navClassNames")
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -14,42 +21,48 @@ const Header = () => {
       }
     }
   `)
+
   return (
-    <div className={headerStyles.header}>
-      <h1>
-        <Link to="/" className={headerStyles.title}>
-          {data.site.siteMetadata.title}
-        </Link>
-      </h1>
-      <nav>
-        <ul className={headerStyles.navList}>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className={headerStyles.navItem} to="/blog">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link className={headerStyles.navItem} to="/projects">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link className={headerStyles.navItem} to="/contact">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav className={headerStyles.navBar}>
+      <ul className={headerStyles.navList}>
+        <li className={headerStyles.logo}>
+          <Link to="/" className={headerStyles.navLink}>
+            {data.site.siteMetadata.title}
+          </Link>
+        </li>
+        <li className={navClassNames}>
+          <Link to="/" className={headerStyles.navLink}>
+            Home
+          </Link>
+        </li>
+        <li className={navClassNames}>
+          <Link className={headerStyles.navLink} to="/blog">
+            Blog
+          </Link>
+        </li>
+        <li className={navClassNames}>
+          <Link className={headerStyles.navLink} to="/projects">
+            Projects
+          </Link>
+        </li>
+        <li className={navClassNames}>
+          <Link className={headerStyles.navLink} to="/contact">
+            Contact
+          </Link>
+        </li>
+        <li
+          role="presentation"
+          className={headerStyles.toggle}
+          onClick={() => setOpen(!isOpen)}
+        >
+          {isOpen ? (
+            <FaTimes className={headerStyles.projectIcon} />
+          ) : (
+            <FaBars className={headerStyles.projectIcon} />
+          )}
+        </li>
+      </ul>
+    </nav>
   )
 }
 

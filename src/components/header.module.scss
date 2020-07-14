@@ -1,34 +1,101 @@
-.link {
-  color: #999999;
+.navBar {
+  background: grey;
+  padding: 0 15px;
 }
 
-.header {
-  // padding: 1rem 0 3rem;
-}
-
-.title {
-  color: black;
-  font-size: 3rem;
+.navLink {
+  color: white;
   text-decoration: none;
 }
 
-.nav-list {
-  display: flex;
+.navItem {
   list-style-type: none;
-  margin: 0;
+  padding: 10px;
 }
 
-.nav-item {
-  color: #999999;
-  font-size: 0.9rem;
-  margin-right: 1.3rem;
-  text-decoration: none;
+.activeNavItem {
+  list-style-type: none;
+  padding: 10px;
 }
 
-.nav-item:hover {
-  color: #666666;
+.navLink:hover,
+.navLink:hover::after {
+  color: #ccc;
 }
 
-.active-nav-item {
-  color: #333333;
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+  order: 0;
+}
+
+/*Mobile menu */
+
+.navList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLink {
+  display: block;
+  padding: 15px 5px;
+}
+
+.toggle {
+  font-size: 20px;
+  color: white;
+  order: 1;
+}
+
+.projectIcon {
+  font-size: 20px;
+  color: white;
+}
+
+.navItem {
+  order: 2;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.activeNavItem {
+  order: 2;
+  width: 100%;
+  text-align: center;
+}
+
+/* tablet menu */
+
+@media all and (min-width: 700px) {
+  .navList {
+    justify-content: center;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .toggle {
+    flex: 1;
+    text-align: right;
+    order: 1;
+  }
+}
+
+/* desktop menu */
+
+@media all and (min-width: 960px) {
+  .navItem {
+    order: 2;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+
+  .toggle {
+    display: none;
+  }
 }

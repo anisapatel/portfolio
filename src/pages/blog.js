@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql, useStaticQuery } from "gatsby"
-import blogStyles from "../pages/blog.module.scss"
+// import blogStyles from "../pages/blog.module.scss"
 import Head from "../components/head"
 import Blogs from "../components/blogs"
 
@@ -29,13 +29,9 @@ const BlogsPage = () => {
   return (
     <Layout>
       <Head title="Blog" />
-      <h1>Blog</h1>
-      <section className={blogStyles.section}>
-        <div className={(blogStyles.sectionCenter, blogStyles.blogsCenter)}>
-          {data.allContentfulBlogPost.edges.map((item, index) => {
-            return <Blogs key={item.node.id} index={index} {...item.node} />
-          })}
-        </div>
+      <section>
+        <h1>Blog</h1>
+        <Blogs blogs={data.allContentfulBlogPost} />
       </section>
     </Layout>
   )

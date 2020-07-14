@@ -1,23 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
-import Image from "gatsby-image"
-import blogsStyles from "./blogs.module.scss"
+import Blog from "../components/blog"
+import blogsStyles from "../components/blogs.module.scss"
 
-const BlogPage = ({ title, slug, publishedDate, blogImage, id }) => {
+const blogs = ({ blogs }) => {
   return (
-    <Link to={`/blog/${slug}`} className={blogsStyles.blog} key={id}>
-      <article>
-        <Image fluid={blogImage.fluid} className={blogsStyles.blogImg} />
-        <div className={blogsStyles.blogCard}>
-          <h4>{title}</h4>
-          <div className={blogsStyles.blogFooter}>
-            <p>{slug}</p>
-            <p>{publishedDate}</p>
-          </div>
-        </div>
-      </article>
-    </Link>
+    <section className={blogsStyles.section}>
+      <div className={(blogsStyles.sectionCenter, blogsStyles.blogsCenter)}>
+        {blogs.edges.map((item, index) => {
+          return <Blog key={item.node.id} index={index} {...item.node} />
+        })}
+      </div>
+    </section>
   )
 }
 
-export default BlogPage
+export default blogs

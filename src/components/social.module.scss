@@ -1,0 +1,25 @@
+.social {
+  margin: 1rem 0;
+  a {
+    padding: 1rem;
+    margin: 1rem 0;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+
+  a:hover {
+    transform: translateY(-2px);
+  }
+
+  .faGithub {
+    color: #211f1f;
+  }
+
+  .faLinkedin {
+    color: #2867b2;
+  }
+
+  .faTwitter {
+    color: #1da1f2;
+  }
+}

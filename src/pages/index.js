@@ -1,17 +1,60 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
+import indexStyles from "../pages/index.module.scss"
+import Projects from "../components/projects"
+import Blogs from "../components/blogs"
+import Contact from "../components/contact"
+import { graphql, useStaticQuery } from "gatsby"
+import About from "../pages/about"
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulProjects {
+        edges {
+          node {
+            title
+            id
+            description {
+              description
+            }
+            github
+            url
+            stack
+            image {
+              fluid {
+                ...GatsbyContentfulFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            title
+            id
+            slug
+            publishedDate(formatString: "MMMM DD YYYY")
+            blogImage {
+              fluid {
+                ...GatsbyContentfulFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <Head title="Home" />
-      <h2>Hi, I'm Anisa.</h2>
-      <p>Software developer based in Yorkshire, England.</p>
-      <p>
-        Need a developer? <Link to="/contact">Contact me</Link>
-      </p>
+      <About />
+      <Projects projects={data.allContentfulProjects} />
+      <Blogs blogs={data.allContentfulBlogPost} />
+      <Contact />
     </Layout>
   )
 }
