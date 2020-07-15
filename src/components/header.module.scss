@@ -88,6 +88,10 @@
 /* desktop menu */
 
 @media all and (min-width: 960px) {
+  .navList {
+    padding-right: 8rem;
+    padding-left: 5rem;
+  }
   .navItem {
     order: 2;
     position: relative;

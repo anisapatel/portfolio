@@ -8,7 +8,7 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
     <article className={projectStyles.project}>
       <Image fluid={image.fluid} className={projectStyles.projectImg} />
       <div className={projectStyles.projectInfo}>
-        <span className={projectStyles.projectNumber}>0{index + 1}</span>
+        {/* <span className={projectStyles.projectNumber}>0{index + 1}</span> */}
         <h3>{title}</h3>
         <p className={projectStyles.projectDesc}>{description.description}</p>
         <div className={projectStyles.projectStack}>
