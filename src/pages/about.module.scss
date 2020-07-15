@@ -4,14 +4,9 @@
 }
 
 .sectionCenter {
-  width: 90vw;
+  width: 95vw;
   margin: 0 auto;
   max-width: 1170px;
-}
-@media screen and (min-width: 992px) {
-  .sectionCenter {
-    width: 95vw;
-  }
 }
 
 /*
@@ -39,8 +34,11 @@ About Page
 }
 
 @media screen and (min-width: 992px) {
+  .sectionCenter {
+    width: 95vw;
+  }
   .aboutCenter {
-    width: 90vw;
+    width: 95vw;
     margin: 0 auto;
     max-width: 1170px;
     // display: grid;

@@ -37,6 +37,9 @@ const IndexPage = () => {
             id
             slug
             publishedDate(formatString: "MMMM DD YYYY")
+            description {
+              description
+            }
             blogImage {
               fluid {
                 ...GatsbyContentfulFluid_withWebp

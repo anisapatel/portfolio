@@ -3,13 +3,21 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import blogStyles from "./blog.module.scss"
 
-const BlogPage = ({ title, slug, publishedDate, blogImage, id }) => {
+const BlogPage = ({
+  title,
+  slug,
+  publishedDate,
+  blogImage,
+  id,
+  description,
+}) => {
   return (
     <Link to={`/blog/${slug}`} className={blogStyles.blog} key={id}>
       <article>
         <Image fluid={blogImage.fluid} className={blogStyles.blogImg} />
         <div className={blogStyles.blogCard}>
           <h4>{title}</h4>
+          <p>{description.description}</p>
           <div className={blogStyles.blogFooter}>
             <p>{slug}</p>
             <p>{publishedDate}</p>

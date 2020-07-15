@@ -15,6 +15,9 @@ const BlogsPage = () => {
             title
             id
             slug
+            description {
+              description
+            }
             publishedDate(formatString: "MMMM DD YYYY")
             blogImage {
               fluid {
