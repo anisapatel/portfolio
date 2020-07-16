@@ -13,11 +13,11 @@ const BlogPage = ({
 }) => {
   return (
     <Link to={`/blog/${slug}`} className={blogStyles.blog} key={id}>
-      <article>
+      <article className={blogStyles.article}>
         <Image fluid={blogImage.fluid} className={blogStyles.blogImg} />
         <div className={blogStyles.blogCard}>
           <h4>{title}</h4>
-          <p>{description.description}</p>
+          <p className={blogStyles.description}>{description.description}</p>
           <div className={blogStyles.blogFooter}>
             <p>{slug}</p>
             <p>{publishedDate}</p>

@@ -1,10 +1,24 @@
 .blog {
   display: block;
   margin-bottom: 2rem;
-  background: var(--clr-grey-10);
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-  transition: var(--transition);
+  text-decoration: none;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  // color: rgba(0, 0, 0, 0.87);
+
+  .article {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border: 0.1px hidden #b7b7b7;
+    -webkit-box-shadow: 1px 5px 15px 2px #b7b7b7;
+    box-shadow: 1px 5px 15px 2px #b7b7b7;
+  }
 
   .blog:hover {
     box-shadow: var(--dark-shadow);
@@ -22,39 +36,46 @@
   padding: 1.5rem 1rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  outline: solid grey;
+  background-color: whitesmoke;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 .blogImg {
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   height: 15rem;
-  outline: solid grey;
 }
 
 .blogCard h4 {
-  color: var(--clr-grey-1);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #102a42;
+}
+
+.description {
+  color: #324d67;
 }
 
 .blogFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1rem;
 }
 .blogFooter p {
   margin-bottom: 0;
   font-weight: bold;
-  color: var(--clr-grey-5);
+  color: #102a42;
 }
 .blogFooter p:first-of-type {
   display: inline-block;
-  background: var(--clr-grey-9);
-  color: var(--clr-grey-5);
   margin-right: 0.5rem;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
+  color: #102a42;
 }
 @media screen and (min-width: 576px) {
   .blogImg {
@@ -63,24 +84,17 @@
 }
 @media screen and (min-width: 850px) {
   .blogImg {
-    // height: 13.75rem;
-    // position: absolute;
-    // top: 0px;
-    // left: 0px;
-    // width: 100%;
-    // object-fit: cover;
-    // object-position: center center;
-    // opacity: 1;
-    // transition: none 0s ease 0s;
-
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
+    height: 15rem;
     object-fit: cover;
     object-position: center center;
     opacity: 1;
     transition: opacity 500ms ease 0s;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 }

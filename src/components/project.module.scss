@@ -57,15 +57,17 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   // color: var(--clr-grey-3);
+  color: #324d67;
 }
 
 h3 {
   margin-top: 1.5rem;
+  color: #102a42;
 }
 
 .projectStack {
   margin-bottom: 2rem;
-  color: #222;
+  color: #102a42;
 }
 
 .projectStack span,
@@ -90,7 +92,7 @@ h3 {
   font-size: 1.5rem;
   margin-right: 0.5rem;
   transition: var(--transition);
-  color: grey;
+  color: darkgrey;
 }
 
 .projectIcon:hover {
@@ -126,13 +128,13 @@ h3 {
     -webkit-box-shadow: 1px 5px 15px 2px #b7b7b7;
     box-shadow: 1px 5px 15px 2px #b7b7b7;
     height: 22rem;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-weight: normal;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
+    // letter-spacing: 0.5px;
+    // word-spacing: 2px;
+    // font-weight: normal;
+    // text-decoration: none;
+    // font-style: normal;
+    // font-variant: normal;
+    // text-transform: none;
   }
   .project:nth-of-type(even) .projectImg {
     grid-column: 5 / -1;
