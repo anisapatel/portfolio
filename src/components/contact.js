@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import Layout from "./layout"
 import Head from "./head"
 import contactStyles from "../components/contact.module.scss"
-import Social from "./social"
 
 const Contact = () => {
   const [formState, setFormState] = useState([
@@ -100,7 +99,6 @@ const Contact = () => {
           </form>
         </article>
       </section>
-      <Social />
     </>
   )
 }

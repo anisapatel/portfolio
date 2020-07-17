@@ -11,7 +11,7 @@
     transform: translateY(-2px);
   }
 
-  .faGithub {
+  .faGithubSquare {
     color: #211f1f;
   }
 
@@ -19,7 +19,12 @@
     color: #2867b2;
   }
 
-  .faTwitter {
+  .faTwitterSquare {
     color: #1da1f2;
+    align-items: center;
+  }
+
+  .FaSquare {
+    color: white;
   }
 }

@@ -3,9 +3,10 @@ import socialStyles from "../components/social.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faLinkedin,
-  faTwitter,
-  faGithub,
+  faTwitterSquare,
+  faGithubSquare,
 } from "@fortawesome/free-brands-svg-icons"
+import { faSquare } from "@fortawesome/free-solid-svg-icons"
 
 const Social = () => {
   return (
@@ -14,25 +15,36 @@ const Social = () => {
         href="https://github.com/anisapatel"
         target="_blank"
         rel="noreferrer"
-        className={socialStyles.faGithub}
+        className={socialStyles.faGithubSquare}
       >
-        <FontAwesomeIcon icon={faGithub} size="2x" />
+        <span className="fa-layers fa-fw">
+          <FontAwesomeIcon icon={faSquare} size="3x" color="white" />
+          <FontAwesomeIcon icon={faGithubSquare} size="3x" />
+        </span>
       </a>
+
       <a
         href="https://www.linkedin.com/in/anisa-patel-758333123/"
         target="_blank"
         rel="noreferrer"
         className={socialStyles.faLinkedin}
       >
-        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+        <span className="fa-layers fa-fw">
+          <FontAwesomeIcon icon={faSquare} size="3x" color="white" />
+          <FontAwesomeIcon icon={faLinkedin} size="3x" />
+        </span>
       </a>
+
       <a
         href="https://twitter.com/annzy_p"
         target="_blank"
         rel="noreferrer"
-        className={socialStyles.faTwitter}
+        className={socialStyles.faTwitterSquare}
       >
-        <FontAwesomeIcon icon={faTwitter} size="2x" />
+        <span className="fa-layers fa-fw">
+          <FontAwesomeIcon icon={faSquare} size="3x" color="white" />
+          <FontAwesomeIcon icon={faTwitterSquare} size="3x" />
+        </span>
       </a>
     </div>
   )
