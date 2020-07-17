@@ -1,43 +1,84 @@
-.blog-template {
+.section {
   padding: 5rem 0;
+  min-height: 100vh;
 }
 
-// .blog-template h1,
-// .blog-template h2 {
-//   text-align: center;
-// }
-// .blog-template ul {
-//   margin-top: 2rem;
-//   display: inline-block;
-// }
-// .blogtemplate ul li {
-//   background: var(--clr-grey-9);
-//   color: var(--clr-grey-5);
-//   padding: 0.5rem 1rem;
-//   margin: 1rem 0;
-//   text-transform: uppercase;
+.sectionCenter {
+  width: 95vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+  .sectionCenter {
+    width: 95vw;
+  }
+
+  .templateCenter {
+    width: 95vw;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}
+
+// .section {
+//   padding: 5rem 0;
 // }
 
-// .blogTemplate blockquote {
-//   background: var(--clr-primary-9);
-//   border-radius: var(--radius);
-//   padding: 1rem;
-//   line-height: 2;
-//   color: var(--clr-primary-5);
-//   margin: 2rem 0;
-// // }
-// .blogTemplate pre {
-//   background: #222;
-//   color: yellow;
-//   overflow-x: scroll;
-//   padding: 1rem 1.5rem;
-//   border-radius: var(--radius);
-// }
-// .blogTemplate img {
-//   width: 15rem;
-//   height: 15rem;
-//   margin: 3rem 0;
+// .blogContent {
+//   width: 95vw;
+//   margin: 0 auto;
+//   max-width: 800px;
+//   text-decoration: none;
+//   letter-spacing: 1px;
+//   word-spacing: 2px;
+//   font-weight: normal;
+//   font-style: normal;
+//   font-variant: normal;
+//   text-transform: none;
 // }
 
-.blogContent {
+// @media screen and (min-width: 992px) {
+//   .blogTemplate {
+//     padding: 5rem 0;
+//   }
+//   .sectionCenter {
+//     width: 95vw;
+//   }
+
+//   .blogContent {
+//     width: 95vw;
+//     margin: 0 auto;
+
+//     max-width: 800px;
+//     text-decoration: none;
+//     letter-spacing: 1px;
+//     word-spacing: 2px;
+//     font-weight: normal;
+//     font-style: normal;
+//     font-variant: normal;
+//     text-transform: none;
+//   }
+// }
+
+h1,
+h2,
+h3 {
+  margin: 0 auto 0.35em;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  margin: 0 auto 1.15em;
 }

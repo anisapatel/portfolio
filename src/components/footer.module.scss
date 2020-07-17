@@ -1,17 +1,19 @@
 .footer {
-  // margin-top: 3rem;
   background: grey;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-evenly;
-  // align-items: center;
-
   height: auto;
-
   text-align: center;
   display: grid;
   place-items: center;
   padding-bottom: 2rem;
   font-size: 16px;
   color: white;
+}
+
+a {
+  // text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: black;
 }
