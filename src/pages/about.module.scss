@@ -1,6 +1,8 @@
 /* section */
 .section {
-  padding: 5rem 0;
+  // padding: 5rem 0;
+  margin-left: 0.5rem;
+  margin-top: 3rem;
 }
 
 .sectionCenter {
@@ -9,26 +11,6 @@
   max-width: 1170px;
 }
 
-/*
-===============
-About Page
-===============
-*/
-.aboutPage {
-  padding: 7rem 0;
-}
-.about-img {
-  margin-bottom: 2rem;
-  height: 25rem;
-}
-// .aboutText .section-title {
-//   margin-bottom: 2rem;
-//   text-align: left;
-// }
-// .aboutText .underline {
-//   margin-left: 0;
-//   margin-right: 0;
-// }
 .aboutText p {
   line-height: 2;
 }
