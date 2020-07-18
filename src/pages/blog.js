@@ -33,7 +33,6 @@ const BlogsPage = () => {
     <Layout>
       <Head title="Blog" />
       <section>
-        <h1>Blog</h1>
         <Blogs blogs={data.allContentfulBlogPost} />
       </section>
     </Layout>

@@ -33,7 +33,6 @@ const ProjectsPage = () => {
     <Layout>
       <Head title="Projects" />
       <section>
-        <h1>Projects</h1>
         <Projects projects={data.allContentfulProjects} />
       </section>
     </Layout>
