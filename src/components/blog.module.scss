@@ -59,7 +59,7 @@
 
 .blogFooter {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
 }
@@ -70,7 +70,7 @@
 }
 .blogFooter p:first-of-type {
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 2rem;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   text-transform: uppercase;

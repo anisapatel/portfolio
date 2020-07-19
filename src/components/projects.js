@@ -5,6 +5,10 @@ import Project from "../components/project"
 const projects = ({ projects }) => {
   return (
     <section className={projectsStyles.section}>
+      {/* <h2 className={projectsStyles.title}>Featured Projects</h2> */}
+      <h2 class={projectsStyles.underline}>
+        <span>Featured Projects</span>
+      </h2>
       <div className={projectsStyles.sectionCenter}>
         {projects.edges.map((project, index) => {
           return (

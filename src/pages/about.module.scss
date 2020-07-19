@@ -1,8 +1,16 @@
+.container {
+  // background-color: #fafafa;
+  background: grey;
+}
+
 /* section */
 .section {
-  // padding: 5rem 0;
-  margin-left: 0.5rem;
-  margin-top: 3rem;
+  padding: 5rem 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  // margin-top: 3rem;
+
+  // background-color: #fafafa;
 }
 
 .sectionCenter {
@@ -13,6 +21,22 @@
 
 .aboutText p {
   line-height: 2;
+  // color: #222;
+  color: white;
+}
+
+.text {
+  // color: #222;
+  color: white;
+}
+
+.link {
+  // color: #222;
+  color: white;
+}
+
+h2 {
+  color: white;
 }
 
 @media screen and (min-width: 992px) {

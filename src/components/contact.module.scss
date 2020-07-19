@@ -2,8 +2,6 @@
   display: grid;
   place-items: center;
   padding: 5rem 0;
-  // margin-left: 0.5rem;
-  // margin-right: 0.5rem;
 }
 
 .form {
@@ -48,6 +46,15 @@
   input::placeholder {
     text-transform: uppercase;
   }
+
+  input:focus {
+    outline: 2px solid grey;
+    border-radius: 6px;
+  }
+  textarea:focus {
+    outline: 2px solid grey;
+    border-radius: 6px;
+  }
 }
 
 .formFields {
@@ -59,6 +66,8 @@
 
 .form h3 {
   padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
 }
 
 button {
@@ -72,6 +81,10 @@ button {
   background-color: grey;
   color: white;
   font-size: 16px;
+}
+
+button:hover {
+  background-color: lighten($color: grey, $amount: 4);
 }
 h3 {
   color: #102a42;

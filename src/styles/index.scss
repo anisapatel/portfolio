@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
   font-family: "Trebuchet MS", "Helvetica";
+  // font-family: "Poppins";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 .body {
   font-family: "Trebuchet MS", "Helvetica";
+  // font-family: "Poppins";
   font-size: 16px;
 }
 
@@ -16,17 +18,17 @@ li {
   list-style-type: none;
 }
 
-// body::-webkit-scrollbar {
-//   width: 0.25rem;
-// }
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
 
-// body::-webkit-scrollbar-track {
-//   // background: #1e1e1e;
-// }
+body::-webkit-scrollbar-track {
+  background: grey;
+}
 
-// body::-webkit-scrollbar-thumb {
-//   // background: #1e1e1e;
-// }
+body::-webkit-scrollbar-thumb {
+  background: grey;
+}
 
 body {
   //   box-sizing: border-box;

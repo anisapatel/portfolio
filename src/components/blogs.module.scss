@@ -1,7 +1,11 @@
+.container {
+  background-color: #fafafa;
+}
 .section {
   padding: 5rem 0;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  // background-color: #fafafa;
 }
 
 .sectionCenter {
@@ -10,8 +14,9 @@
   max-width: 1170px;
 }
 
-.title {
+.underline {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -26,5 +31,32 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
     column-gap: 2rem;
+  }
+
+  .underline {
+    overflow: hidden;
+    text-align: center;
+    color: #102a42;
+    margin-bottom: 3rem;
+  }
+  .underline > span {
+    position: relative;
+    display: inline-block;
+  }
+  .underline > span:before,
+  .underline > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    // width: 591px; /* half of limiter*/
+    width: 200px;
+    margin: 0 20px;
+  }
+  .underline > span:before {
+    right: 100%;
+  }
+  .underline > span:after {
+    left: 100%;
   }
 }

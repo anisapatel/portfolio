@@ -1,21 +1,64 @@
 .navBar {
   background: grey;
   padding: 0 15px;
+  position: fixed;
+  width: 100%;
+  transition: 0.6s;
+  z-index: 100000;
 }
 
+.navBarSticky {
+  background: white;
+  z-index: 100000;
+  padding: 0 15px;
+  width: 100%;
+  position: fixed;
+  color: black;
+  transition: 0.6s;
+}
+
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+  order: 0;
+  position: relative;
+  transition: 0.6s;
+}
+.navList {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 .navLink {
+  display: block;
+  padding: 15px 5px;
   color: white;
   text-decoration: none;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navLinkSticky {
+  display: block;
+  padding: 15px 5px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  transition: 0.5s;
 }
 
 .navItem {
   list-style-type: none;
   padding: 10px;
+  position: relative;
 }
 
 .activeNavItem {
   list-style-type: none;
   padding: 10px;
+  position: relative;
 }
 
 .navLink:hover,
@@ -23,25 +66,7 @@
   color: #ccc;
 }
 
-.logo {
-  font-size: 20px;
-  padding: 7.5px 10px 7.5px 0;
-  order: 0;
-}
-
 /*Mobile menu */
-
-.navList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navLink {
-  display: block;
-  padding: 15px 5px;
-}
 
 .toggle {
   font-size: 20px;
@@ -52,6 +77,11 @@
 .projectIcon {
   font-size: 20px;
   color: white;
+}
+
+.projectIconSticky {
+  font-size: 20px;
+  color: black;
 }
 
 .navItem {
