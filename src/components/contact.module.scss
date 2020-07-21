@@ -70,7 +70,7 @@
   text-align: center;
 }
 
-.button {
+button {
   display: block;
   margin: 0 auto;
   width: 30%;
@@ -83,22 +83,13 @@
   font-size: 16px;
 }
 
-.button:hover {
+button:hover {
   background-color: lighten($color: grey, $amount: 4);
 }
 h3 {
   color: #102a42;
 }
 
-.button:disabled {
+button:disabled {
   background-color: lighten($color: grey, $amount: 6);
-  display: block;
-  margin: 0 auto;
-  width: 30%;
-  padding: 0.5rem;
-  outline: none;
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-size: 16px;
 }
