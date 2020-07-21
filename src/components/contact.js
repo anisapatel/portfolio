@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import contactStyles from "../components/contact.module.scss"
 
 const Contact = () => {
