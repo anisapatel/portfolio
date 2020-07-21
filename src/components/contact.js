@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import contactStyles from "../components/contact.module.scss"
 
 const Contact = () => {
@@ -6,7 +6,6 @@ const Contact = () => {
     { name: "", email: "", subject: "", message: "" },
   ])
   const [isDisabled, setDisabled] = useState(false)
-  let btnRef = useRef()
 
   const encode = data => {
     return Object.keys(data)
@@ -31,12 +30,6 @@ const Contact = () => {
     })
       .then(() => setDisabled(true))
       .catch(error => alert(error))
-  }
-
-  const onBtnClick = e => {
-    if (btnRef.current) {
-      btnRef.current.setAttribute("disabled", "disabled")
-    }
   }
 
   return (
@@ -108,7 +101,12 @@ const Contact = () => {
                 ></textarea>
               </label>
             </div>
-            <button type="submit" ref={btnRef} onClick={onBtnClick}>
+            <button
+              type="submit"
+              className={
+                isDisabled ? contactStyles.button : contactStyles.buttonDisabled
+              }
+            >
               {isDisabled ? "Sent!" : "Submit"}
             </button>
           </form>
