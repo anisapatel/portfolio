@@ -90,7 +90,7 @@ h3 {
   color: #102a42;
 }
 
-.buttonDisabled {
+.button:disabled {
   background-color: lighten($color: grey, $amount: 6);
   display: block;
   margin: 0 auto;
