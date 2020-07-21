@@ -1,12 +1,13 @@
-import React, { useState } from "react"
-import Layout from "./layout"
-import Head from "./head"
+import React, { useState, useRef } from "react"
 import contactStyles from "../components/contact.module.scss"
 
 const Contact = () => {
   const [formState, setFormState] = useState([
     { name: "", email: "", subject: "", message: "" },
   ])
+  let btnRef = useRef()
+  const [buttonText, setButtonText] = useState("Submit")
+
   const encode = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -17,7 +18,9 @@ const Contact = () => {
   }
 
   const handleSubmit = event => {
+    event.preventDefault()
     const form = event.target
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -28,14 +31,20 @@ const Contact = () => {
     })
       .then(() => alert("success"))
       .catch(error => alert(error))
-    event.preventDefault()
+  }
+
+  const onBtnClick = e => {
+    if (btnRef.current) {
+      btnRef.current.setAttribute("disabled", "disabled")
+      setButtonText("Sent!")
+    }
   }
 
   return (
     <>
       <section className={contactStyles.container}>
         <article className={contactStyles.form}>
-          <h3>Get in touch</h3>
+          <h3>Contact me</h3>
           <form
             name="contact"
             method="POST"
@@ -44,8 +53,13 @@ const Contact = () => {
             onSubmit={handleSubmit}
           >
             <div className={contactStyles.formFields}>
-              <input type="hidden" name="bot-field" />
-              <input type="hidden" name="contact" value="contact" />
+              <input type="hidden" name="bot-field" id="bot-field" />
+              <input
+                type="hidden"
+                name="contact"
+                id="contact"
+                value="contact"
+              />
               <label htmlFor="name">
                 <input
                   type="text"
@@ -95,7 +109,9 @@ const Contact = () => {
                 ></textarea>
               </label>
             </div>
-            <button type="submit">Submit</button>
+            <button ref={btnRef} onClick={onBtnClick} type="submit">
+              {buttonText}
+            </button>
           </form>
         </article>
       </section>

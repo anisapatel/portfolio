@@ -6,7 +6,6 @@ const blogs = ({ blogs }) => {
   return (
     <div className={blogsStyles.container}>
       <section className={blogsStyles.section}>
-        {/* <h2 className={blogsStyles.title}>Latest Posts</h2> */}
         <h2 class={blogsStyles.underline}>
           <span>Latest Posts</span>
         </h2>

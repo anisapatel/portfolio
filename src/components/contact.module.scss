@@ -22,7 +22,7 @@
     width: 100%;
     border: none;
     margin-bottom: 1.25rem;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     margin: 1rem 0;
     padding: 12px 18px;
 
@@ -34,7 +34,7 @@
     border: none;
     margin-bottom: 1.25rem;
     border-radius: 6px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     margin: 8px 0;
     padding: 12px 18px;
   }
@@ -88,4 +88,8 @@ button:hover {
 }
 h3 {
   color: #102a42;
+}
+
+button:disabled {
+  background-color: lighten($color: pink, $amount: 12);
 }

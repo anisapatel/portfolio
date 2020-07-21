@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import Projects from "../components/projects"
-// import projectsStyles from "../pages/projects.module.scss"
+import projectsStyles from "../pages/projects.module.scss"
 import { graphql, useStaticQuery } from "gatsby"
 
 const ProjectsPage = () => {
@@ -32,7 +32,7 @@ const ProjectsPage = () => {
   return (
     <Layout>
       <Head title="Projects" />
-      <section>
+      <section className={projectsStyles.section}>
         <Projects projects={data.allContentfulProjects} />
       </section>
     </Layout>
