@@ -1,12 +1,11 @@
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import contactStyles from "../components/contact.module.scss"
 
 const Contact = () => {
   const [formState, setFormState] = useState([
     { name: "", email: "", subject: "", message: "" },
   ])
-  let btnRef = useRef()
-  const [buttonText, setButtonText] = useState("Submit")
+  const [isDisabled, setDisabled] = setState(false)
 
   const encode = data => {
     return Object.keys(data)
@@ -29,15 +28,8 @@ const Contact = () => {
         ...formState,
       }),
     })
-      .then(() => alert("success"))
+      .then(() => setDisabled(true))
       .catch(error => alert(error))
-  }
-
-  const onBtnClick = e => {
-    if (btnRef.current) {
-      btnRef.current.setAttribute("disabled", "disabled")
-      setButtonText("Sent!")
-    }
   }
 
   return (
@@ -109,8 +101,8 @@ const Contact = () => {
                 ></textarea>
               </label>
             </div>
-            <button ref={btnRef} onClick={onBtnClick} type="submit">
-              {buttonText}
+            <button type="submit">
+              {isDisabled ? "Your message has been sent!" : "Submit"}
             </button>
           </form>
         </article>
