@@ -5,7 +5,7 @@ const Contact = () => {
   const [formState, setFormState] = useState([
     { name: "", email: "", subject: "", message: "" },
   ])
-  const [isDisabled, setDisabled] = setState(false)
+  const [isDisabled, setDisabled] = useState(false)
 
   const encode = data => {
     return Object.keys(data)
