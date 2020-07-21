@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { FaBars, FaTimes } from "react-icons/fa"
-
-//import "./header.module.scss"
 import headerStyles from "./header.module.scss"
 
 const Header = () => {

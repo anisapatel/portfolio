@@ -77,7 +77,8 @@ button {
   outline: none;
   border: none;
   border-radius: 6px;
-  background-color: grey;
+  // background-color: grey;
+  background: #626262;
   color: white;
   font-size: 16px;
 }
@@ -90,5 +91,5 @@ h3 {
 }
 
 button:disabled {
-  background-color: lighten($color: #b7b7b7, $amount: 6);
+  background-color: lighten($color: grey, $amount: 20);
 }
