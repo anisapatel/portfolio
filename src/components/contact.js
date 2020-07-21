@@ -32,13 +32,6 @@ const Contact = () => {
       .catch(error => alert(error))
   }
 
-  // const handleClick = event => {
-  //   if (isDisabled) {
-  //     return
-  //   }
-  //   setDisabled({ isDisabled: true })
-  // }
-
   return (
     <>
       <section className={contactStyles.container}>
