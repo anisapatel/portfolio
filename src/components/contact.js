@@ -33,7 +33,7 @@ const Contact = () => {
   }
 
   return (
-    <>
+    <div className={contactStyles.contact}>
       <section className={contactStyles.container}>
         <article className={contactStyles.form}>
           <h3>Contact me</h3>
@@ -101,13 +101,34 @@ const Contact = () => {
                 ></textarea>
               </label>
             </div>
-            <button disabled={isDisabled} type="submit">
+            <button
+              className={contactStyles.button}
+              disabled={isDisabled}
+              type="submit"
+            >
               {isDisabled ? "Sent!" : "Submit"}
             </button>
           </form>
         </article>
       </section>
-    </>
+      <div className={contactStyles.email}>
+        <p>
+          Feel free to reach out if you have any questions/suggestions, want my
+          CV, think we could work together, or just want to say hello! Whatever
+          it is I'd love to hear from you! Use the form or email me directly at{" "}
+          <a
+            href="mailto:anisa_patel@live.co.uk"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            type="button"
+            className={contactStyles.a}
+          >
+            anisa_patel@live.co.uk
+          </a>
+          .
+        </p>
+      </div>
+    </div>
   )
 }
 

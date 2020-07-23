@@ -22,6 +22,7 @@
 
   .article:hover {
     transform: scale(1.02);
+    color: grey;
     // transform: translateY(-2px);
   }
 
@@ -36,7 +37,7 @@
   padding: 1.5rem 1.5rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -50,11 +51,11 @@
 .blogCard h4 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  color: #102a42;
+  // color: #102a42;
 }
 
 .description {
-  color: #324d67;
+  // color: #324d67;
 }
 
 .blogFooter {
@@ -66,7 +67,7 @@
 .blogFooter p {
   margin-bottom: 0;
   font-weight: bold;
-  color: #102a42;
+  // color: #102a42;
 }
 .blogFooter p:first-of-type {
   display: inline-block;
@@ -76,7 +77,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
-  color: #102a42;
+  // color: #102a42;
 }
 @media screen and (min-width: 576px) {
   .blogImg {

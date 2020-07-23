@@ -7,6 +7,8 @@ import Blogs from "../components/blogs"
 import Contact from "../components/contact"
 import { graphql, useStaticQuery } from "gatsby"
 import About from "../pages/about"
+import { ThemeContextProvider } from "../components/ThemeProvider"
+import Switch from "../components/switch"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -52,13 +54,16 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout>
-      <Head title="Home" />
-      <About />
-      <Projects projects={data.allContentfulProjects} />
-      <Blogs blogs={data.allContentfulBlogPost} />
-      <Contact />
-    </Layout>
+    <ThemeContextProvider>
+      <Layout>
+        <Head title="Home" />
+        {/* <Switch /> */}
+        <About />
+        <Projects projects={data.allContentfulProjects} />
+        <Blogs blogs={data.allContentfulBlogPost} />
+        <Contact />
+      </Layout>
+    </ThemeContextProvider>
   )
 }
 
