@@ -31,13 +31,6 @@
   width: 96%;
 }
 
-.logo {
-  font-size: 20px;
-  padding: 7.5px 10px 7.5px 0;
-  order: 0;
-  position: relative;
-  transition: 0.6s;
-}
 .navList {
   position: relative;
   display: flex;
@@ -89,24 +82,33 @@
   color: #ccc;
 }
 
+.logo {
+  font-size: 18px;
+  // padding: 7.5px 10px 7.5px 0;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  order: 0;
+  position: relative;
+  transition: 0.6s;
+}
+
 /*Mobile menu */
 
 .toggle {
-  padding-top: 5px;
-  font-size: 20px;
+  padding-top: 0.3rem;
+  font-size: 1.5rem;
   color: white;
-  order: 2;
+  order: 1;
 }
 
 .projectIcon {
-  // padding-top: 0.6rem;
-
-  font-size: 20px;
+  font-size: 1.5rem;
   color: white;
 }
 
 .projectIconSticky {
-  font-size: 20px;
+  font-size: 1.5rem;
   color: black;
 }
 
@@ -190,6 +192,13 @@
 
   .navBarSticky {
     width: 96%;
+  }
+  .logo {
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 0;
+    order: 0;
+    position: relative;
+    transition: 0.6s;
   }
 }
 
