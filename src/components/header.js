@@ -84,7 +84,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className={switchBar}>
+      <div className={headerStyles.switch}>
         <Switch />
       </div>
     </header>
