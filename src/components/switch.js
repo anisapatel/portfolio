@@ -12,7 +12,8 @@ const Switch = () => {
   }
 
   return (
-    <div className={switchStyles.switchSection}>
+    // <div className={switchStyles.switchSection}>
+    <>
       <input
         checked={value}
         onChange={handleToggle}
@@ -44,20 +45,9 @@ const Switch = () => {
           />
         )}
       </label>
-    </div>
+    </>
+    /* </div> */
   )
 }
 
 export default Switch
-
-{
-  /* <button
-variant='contained'
-onClick={() => {
-  state.setTheme(state.theme.type)
-}}
-style={btn}
->
-Toggle Theme
-</button> */
-}
