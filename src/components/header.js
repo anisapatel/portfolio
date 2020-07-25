@@ -51,6 +51,7 @@ const Header = () => {
               {data.site.siteMetadata.title}
             </Link>
           </li>
+
           <li className={navClassNames}>
             <Link to="/" className={isSticky ? navLinkSticky : navLink}>
               Home
@@ -71,6 +72,7 @@ const Header = () => {
               Contact
             </Link>
           </li>
+
           <li
             role="presentation"
             className={headerStyles.toggle}

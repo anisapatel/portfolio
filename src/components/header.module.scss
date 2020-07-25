@@ -5,7 +5,7 @@
 .header {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
+  // justify-content: space-around;
   background-image: linear-gradient(to left, #ddd6f3, #faaca8);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -143,7 +143,9 @@
 
 @media all and (min-width: 700px) {
   .navList {
-    justify-content: center;
+    // justify-content: center;
+    // justify-content: space-between;
+    // align-items: center;
   }
 
   // .logo {
@@ -179,8 +181,8 @@
 
 @media all and (min-width: 960px) {
   .navList {
-    padding-right: 8rem;
-    padding-left: 5rem;
+    justify-content: left;
+    padding-left: 1rem;
   }
   .navItem {
     order: 2;
@@ -232,7 +234,12 @@
   }
   .logo {
     font-size: 20px;
-    // padding: 7.5px 10px 7.5px 0;
+    padding: 7.5px 10px 7.5px 0;
+    padding-top: 7.5px;
+    padding-right: 20rem;
+    padding-bottom: 7.5px;
+    padding-left: 0;
+    text-align: left;
     order: 0;
     position: relative;
     transition: 0.6s;
