@@ -18,7 +18,9 @@ const AboutPage = () => {
     <div className={aboutStyles.container} style={about}>
       <section className={aboutStyles.section}>
         <div className={(aboutStyles.sectionCenter, aboutStyles.aboutCenter)}>
-          <h2 style={about}>Hi, I'm Anisa.</h2>
+          <h2 className={aboutStyles.h2} style={about}>
+            Hi! I'm Anisa
+          </h2>
           <article className={aboutStyles.text}>
             <p>
               I'm a recently graduated full-stack software developer based in

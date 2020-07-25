@@ -52,6 +52,7 @@
   margin: 0 auto;
   max-width: 1170px;
 }
+
 .aboutText {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -70,7 +71,7 @@
   // color: #324d67;
   // color: white;
   padding-top: 1rem;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   letter-spacing: 1px;
   // word-spacing: 2px;
@@ -89,10 +90,10 @@
   color: #faaca8;
 }
 
-h2 {
+.h2 {
   color: #222;
+  font-size: 26px;
   // color: white;
-  // padding-top: 5rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -105,13 +106,17 @@ h2 {
 
   .text {
     // color: white;
+    font-size: 22px;
   }
 
   .aboutText p {
     // color: white;
   }
-  h2 {
+  .h2 {
+    color: #222;
+    font-size: 39px;
     // color: white;
+    padding-top: 2rem;
   }
   .link {
     // color: white;
