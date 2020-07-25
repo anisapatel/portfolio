@@ -7,7 +7,7 @@
 // pull data from the site meta data object which is across all pages of the site and then query graphql api to render it in component
 module.exports = {
   siteMetadata: {
-    title: "Anisa Patel Portfolio",
+    title: "anisa patel",
     author: "Anisa Patel",
   },
   plugins: [

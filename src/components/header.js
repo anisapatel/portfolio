@@ -47,11 +47,16 @@ const Header = () => {
       <nav className={isSticky ? navBarSticky : navBar}>
         <ul className={headerStyles.navList}>
           <li className={headerStyles.logo}>
-            <Link to="/" className={isSticky ? navLinkSticky : navLink}>
+            <Link
+              to="/"
+              className={isSticky ? navLinkSticky : navLink}
+              className={
+                isSticky ? headerStyles.title : headerStyles.titleActive
+              }
+            >
               {data.site.siteMetadata.title}
             </Link>
           </li>
-
           <li className={navClassNames}>
             <Link to="/" className={isSticky ? navLinkSticky : navLink}>
               Home
