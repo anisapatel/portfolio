@@ -18,11 +18,14 @@
     border: 0.1px hidden #b7b7b7;
     -webkit-box-shadow: 1px 5px 15px 2px #b7b7b7;
     box-shadow: 1px 5px 15px 2px #b7b7b7;
+    color: #000000;
   }
 
   .article:hover {
     transform: scale(1.02);
-    color: grey;
+    // color: grey;
+    // color: #f96c85;
+    color: #4f4f4f;
     // transform: translateY(-2px);
   }
 

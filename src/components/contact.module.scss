@@ -97,6 +97,7 @@
   padding-bottom: 1rem;
   padding-top: 1rem;
   text-align: center;
+  color: #4f4f4f;
 }
 
 .button {
@@ -108,7 +109,14 @@
   border: none;
   border-radius: 6px;
   // background-color: grey;
-  background-image: linear-gradient(to left, #ddd6f3, #faaca8);
+  background-image: linear-gradient(
+    to bottom,
+    #d76d77,
+    #ee9ca7,
+    #ee9ca7,
+    #ffafbd,
+    #ffdde1
+  );
   // background: #626262;
   // color: white;
   font-size: 16px;
@@ -116,7 +124,14 @@
 
 .button:hover {
   // background-color: lighten($color: grey, $amount: 4);
-  background-image: linear-gradient(to right, #ddd6f3, #faaca8);
+  background-image: linear-gradient(
+    to top,
+    #d76d77,
+    #ee9ca7,
+    #ee9ca7,
+    #ffafbd,
+    #ffdde1
+  );
 }
 h3 {
   // color: #102a42;

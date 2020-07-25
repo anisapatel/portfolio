@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: row-reverse;
   // justify-content: space-around;
-  background-image: linear-gradient(to left, #ddd6f3, #faaca8);
+  background-color: white;
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
   padding-left: 1rem;
@@ -58,7 +58,7 @@
   display: block;
   padding: 15px 5px;
   // color: white;
-  color: white;
+  color: #4f4f4f;
   // color: black;
   text-decoration: none;
   position: relative;
@@ -111,7 +111,7 @@
   font-family: "Sacramento", cursive;
   // display: block;
   padding: 15px 5px;
-  padding-left: 2.5rem;
+  padding-left: 3.5rem;
   // color: white;
   color: white;
   // color: black;
@@ -119,7 +119,7 @@
   position: relative;
   transition: 0.5s;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   color: #f96c85;
 }
 
@@ -127,16 +127,15 @@
   font-family: "Sacramento", cursive;
   // display: block;
   padding: 15px 5px;
-  padding-left: 2.5rem;
+  padding-left: 3.5rem;
   // color: white;
-  color: white;
   // color: black;
   text-decoration: none;
   position: relative;
   transition: 0.5s;
   text-align: center;
-  font-size: 30px;
-  // color: #f96c85;
+  font-size: 40px;
+  // color: white;
   color: #4f4f4f;
 }
 
@@ -144,7 +143,7 @@
 
 .switch {
   margin: 0;
-  padding-top: 0.05rem;
+  padding-top: 0.5rem;
   padding-right: 1rem;
 }
 
@@ -152,12 +151,14 @@
   padding-top: 0.5rem;
   // font-size: 1.5rem;
   color: white;
+
   order: 1;
 }
 
 .projectIcon {
   font-size: 1.5rem;
-  color: white;
+  color: #4f4f4f;
+  // color: #4f4f4f;
 }
 
 .projectIconSticky {
@@ -241,7 +242,8 @@
   .header {
     display: flex;
     flex-direction: row;
-    background-image: linear-gradient(to left, #ddd6f3, #faaca8);
+    background: white;
+    // background-image: linear-gradient(to left, #ddd6f3, #faaca8);
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     padding-right: 1rem;
@@ -249,6 +251,7 @@
     width: 100%;
     transition: 0.6s;
     z-index: 100000;
+    color: #4f4f4f;
   }
 
   .headerSticky {
@@ -296,5 +299,15 @@
     margin: 0;
     padding-top: 0.5rem;
     padding-right: 1rem;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .title {
+    padding-left: 1.5rem;
+  }
+
+  .titleActive {
+    padding-left: 1.5rem;
   }
 }

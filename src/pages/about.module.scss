@@ -1,5 +1,14 @@
 .container {
-  background-image: linear-gradient(to left, #ddd6f3, #faaca8);
+  background-image: linear-gradient(
+    to bottom,
+    #d76d77,
+    #ee9ca7,
+    #ee9ca7,
+    #ffafbd,
+    #ffdde1,
+    #ffffff
+  );
+  // #ffc3a0,
   padding-top: 0;
   padding: 1rem 0;
   min-height: 100vh;
@@ -7,7 +16,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-bottom: 0;
   top: 0;
   left: 0;
