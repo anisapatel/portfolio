@@ -6,16 +6,23 @@ import { ThemeContext } from "./ThemeProvider"
 const Projects = ({ projects }) => {
   const state = useContext(ThemeContext)
 
-  // const projectsS = {
-  //   // marginTop: 0,
-  //   backgroundColor: state.theme.primary,
-  //   // width: "100%",
-  //   // height: "60px",
-  //   color: state.theme.text,
-  // }
+  const styleProject = {
+    // marginTop: 0,
+    // backgroundColor: state.theme.primary,
+    // width: "100%",
+    // height: "60px",
+    // color: state.theme.text,
+  }
 
   return (
-    <section className={projectsStyles.section}>
+    <section
+      className={
+        state.theme.type === "light"
+          ? projectsStyles.section
+          : projectsStyles.sectionDark
+      }
+      style={styleProject}
+    >
       <h2 class={projectsStyles.underline}>
         <span>Featured Projects</span>
       </h2>

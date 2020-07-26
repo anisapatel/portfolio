@@ -1,11 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import contactStyles from "../components/contact.module.scss"
+import { ThemeContext } from "./ThemeProvider"
 
 const Contact = () => {
   const [formState, setFormState] = useState([
     { name: "", email: "", subject: "", message: "" },
   ])
   const [isDisabled, setDisabled] = useState(false)
+  const state = useContext(ThemeContext)
 
   const encode = data => {
     return Object.keys(data)

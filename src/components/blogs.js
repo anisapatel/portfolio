@@ -1,10 +1,18 @@
-import React from "react"
+import React, { useContext } from "react"
 import Blog from "../components/blog"
 import blogsStyles from "../components/blogs.module.scss"
+import { ThemeContext } from "./ThemeProvider"
 
-const blogs = ({ blogs }) => {
+const Blogs = ({ blogs }) => {
+  const state = useContext(ThemeContext)
   return (
-    <div className={blogsStyles.container}>
+    <div
+      className={
+        state.theme.type === "light"
+          ? blogsStyles.container
+          : blogsStyles.containerDark
+      }
+    >
       <section className={blogsStyles.section}>
         <h2 class={blogsStyles.underline}>
           <span>Latest Posts</span>
@@ -19,4 +27,4 @@ const blogs = ({ blogs }) => {
   )
 }
 
-export default blogs
+export default Blogs

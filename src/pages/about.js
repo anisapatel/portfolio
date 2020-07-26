@@ -15,7 +15,14 @@ const AboutPage = () => {
     color: state.theme.text,
   }
   return (
-    <div className={aboutStyles.container} style={about}>
+    <div
+      className={
+        state.theme.type === "light"
+          ? aboutStyles.container
+          : aboutStyles.containerDark
+      }
+      style={about}
+    >
       <section className={aboutStyles.section}>
         <div className={(aboutStyles.sectionCenter, aboutStyles.aboutCenter)}>
           <h2 className={aboutStyles.h2} style={about}>

@@ -30,6 +30,38 @@
   text-transform: none;
 }
 
+.footerDark {
+  // background: #626262;
+  // background-color: #222;
+  // background-image: linear-gradient(to right, #696969, #7d7d7d);
+  background-image: linear-gradient(
+    to bottom,
+    #2c2d30,
+    #343a40,
+    #414345,
+    #304352,
+    #2c3e50,
+    #182848
+  );
+
+  // background-image: linear-gradient(to left, #b86b77, #cf989f);
+
+  height: auto;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-bottom: 2rem;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  // word-spacing: 2px;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
 a {
   // text-decoration: none;
   // color: white;

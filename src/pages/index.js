@@ -57,7 +57,6 @@ const IndexPage = () => {
     <ThemeContextProvider>
       <Layout>
         <Head title="Home" />
-        {/* <Switch /> */}
         <About />
         <Projects projects={data.allContentfulProjects} />
         <Blogs blogs={data.allContentfulBlogPost} />

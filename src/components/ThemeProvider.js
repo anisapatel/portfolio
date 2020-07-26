@@ -19,7 +19,7 @@ export const ThemeContextProvider = props => {
     },
     dark: {
       type: "dark",
-      primary: "#343a40",
+      primary: "#2c2d30",
       text: "white",
       transition: "primary 0.3s, text 0.3s",
     },

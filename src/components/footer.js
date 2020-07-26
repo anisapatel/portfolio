@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import footerStyles from "../components/footer.module.scss"
 import Social from "./social"
+import { ThemeContext } from "./ThemeProvider"
 
 const Footer = () => {
+  const state = useContext(ThemeContext)
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -14,7 +16,13 @@ const Footer = () => {
     }
   `)
   return (
-    <footer className={footerStyles.footer}>
+    <footer
+      className={
+        state.theme.type === "light"
+          ? footerStyles.footer
+          : footerStyles.footerDark
+      }
+    >
       <div>
         <Social />
         <h4>Made with &#10084; © 2020 - {data.site.siteMetadata.author}. </h4>

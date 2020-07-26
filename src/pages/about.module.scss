@@ -33,6 +33,59 @@
   //   transition: background-color 0.3s, color 0.3s;
   // }
 }
+
+.containerDark {
+  background-image: linear-gradient(
+    to top,
+    #2c2d30,
+    #343a40,
+    #414345,
+    #304352,
+    #2c3e50,
+    #182848
+  );
+  // #141e30,
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   #2b5876,
+  //   #4e4376,
+  //   #373b44,
+  //   #292e49,
+  //   #2c3e50,
+  //   #4286f4,
+  //   #536976,
+  //   #bdc3c7,
+  //   #bbd2c5,
+  //   #000000
+  // );
+  // #ffc3a0,
+  // #0f0c29,
+  // #232526,
+  // #3f4c6b,
+  // #434343,
+  // #414345,
+
+  // #2c3e50,
+  // #3f4c6b,
+  // #292e49,
+  // #2c3e50,
+  // #2b5876,
+  // #4b6cb7
+  // #232526,
+  padding-top: 0;
+  padding: 1rem 0;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
 // min-height: 100vh;
 // height: 100vh;
 // display: flex;

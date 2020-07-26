@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { FaBars, FaTimes } from "react-icons/fa"
 import headerStyles from "./header.module.scss"
 import Switch from "../components/switch"
+import { ThemeContext } from "./ThemeProvider"
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false)
@@ -20,6 +21,17 @@ const Header = () => {
   const projectIconSticky = headerStyles.projectIconSticky
   const header = headerStyles.header
   const headerSticky = headerStyles.headerSticky
+  const headerDark = headerStyles.headerDark
+  const headerStickyDark = headerStyles.headerStickyDark
+  const state = useContext(ThemeContext)
+
+  const styleHeader = {
+    // marginTop: 0,
+    // backgroundColor: state.theme.primary,
+    // width: "100%",
+    // height: "60px",
+    // color: state.theme.text,
+  }
 
   const data = useStaticQuery(graphql`
     query {
@@ -43,37 +55,105 @@ const Header = () => {
   })
 
   return (
-    <header className={isSticky ? headerSticky : header}>
+    <header
+      className={
+        state.theme.type === "light"
+          ? isSticky
+            ? headerSticky
+            : header
+          : isSticky
+          ? headerStickyDark
+          : headerDark
+      }
+    >
       <nav className={isSticky ? navBarSticky : navBar}>
         <ul className={headerStyles.navList}>
           <li className={headerStyles.logo}>
             <Link
               to="/"
-              className={isSticky ? navLinkSticky : navLink}
               className={
-                isSticky ? headerStyles.title : headerStyles.titleActive
+                state.theme.type === "light"
+                  ? isSticky
+                    ? navLinkSticky
+                    : navLink
+                  : isSticky
+                  ? headerStyles.navLinkStickyDark
+                  : headerStyles.navLinkDark
+              }
+              className={
+                state.theme.type === "light"
+                  ? isSticky
+                    ? headerStyles.title
+                    : headerStyles.titleActive
+                  : isSticky
+                  ? headerStyles.titleDark
+                  : headerStyles.titleActiveDark
               }
             >
               {data.site.siteMetadata.title}
             </Link>
           </li>
           <li className={navClassNames}>
-            <Link to="/" className={isSticky ? navLinkSticky : navLink}>
+            <Link
+              to="/"
+              className={
+                state.theme.type === "light"
+                  ? isSticky
+                    ? navLinkSticky
+                    : navLink
+                  : isSticky
+                  ? headerStyles.navLinkStickyDark
+                  : headerStyles.navLinkDark
+              }
+            >
               Home
             </Link>
           </li>
           <li className={navClassNames}>
-            <Link className={isSticky ? navLinkSticky : navLink} to="/blog">
+            <Link
+              className={
+                state.theme.type === "light"
+                  ? isSticky
+                    ? navLinkSticky
+                    : navLink
+                  : isSticky
+                  ? headerStyles.navLinkStickyDark
+                  : headerStyles.navLinkDark
+              }
+              to="/blog"
+            >
               Blog
             </Link>
           </li>
           <li className={navClassNames}>
-            <Link className={isSticky ? navLinkSticky : navLink} to="/projects">
+            <Link
+              className={
+                state.theme.type === "light"
+                  ? isSticky
+                    ? navLinkSticky
+                    : navLink
+                  : isSticky
+                  ? headerStyles.navLinkStickyDark
+                  : headerStyles.navLinkDark
+              }
+              to="/projects"
+            >
               Projects
             </Link>
           </li>
           <li className={navClassNames}>
-            <Link className={isSticky ? navLinkSticky : navLink} to="/contact">
+            <Link
+              className={
+                state.theme.type === "light"
+                  ? isSticky
+                    ? navLinkSticky
+                    : navLink
+                  : isSticky
+                  ? headerStyles.navLinkStickyDark
+                  : headerStyles.navLinkDark
+              }
+              to="/contact"
+            >
               Contact
             </Link>
           </li>
@@ -84,9 +164,29 @@ const Header = () => {
             onClick={() => setOpen(!isOpen)}
           >
             {isOpen ? (
-              <FaTimes className={isSticky ? projectIconSticky : projectIcon} />
+              <FaTimes
+                className={
+                  state.theme.type === "light"
+                    ? isSticky
+                      ? projectIconSticky
+                      : projectIcon
+                    : isSticky
+                    ? headerStyles.projectIconStickyDark
+                    : headerStyles.projectIconDark
+                }
+              />
             ) : (
-              <FaBars className={isSticky ? projectIconSticky : projectIcon} />
+              <FaBars
+                className={
+                  state.theme.type === "light"
+                    ? isSticky
+                      ? projectIconSticky
+                      : projectIcon
+                    : isSticky
+                    ? headerStyles.projectIconStickyDark
+                    : headerStyles.projectIconDark
+                }
+              />
             )}
           </li>
         </ul>

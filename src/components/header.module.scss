@@ -36,6 +36,42 @@
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.headerDark {
+  display: flex;
+  flex-direction: row-reverse;
+  // justify-content: space-around;
+  // background-color: #2c2d30;
+  // background: #182848;
+  background: #2c2d30;
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: fixed;
+  width: 100%;
+  transition: 0.6s;
+  z-index: 100000;
+  color: white;
+}
+
+.headerStickyDark {
+  // background: white;
+  background: #2c2d30;
+  z-index: 100000;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  position: fixed;
+  color: #f96c85;
+  display: flex;
+  flex-direction: row-reverse;
+  transition: 0.6s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .navBarSticky {
   width: 96%;
 }
@@ -70,6 +106,29 @@
   display: block;
   padding: 15px 5px;
   color: black;
+  text-decoration: none;
+  position: relative;
+  transition: 0.5s;
+  text-align: right;
+}
+
+.navLinkDark {
+  display: block;
+  padding: 15px 5px;
+  color: white;
+  // color: #4f4f4f;
+  // color: black;
+  text-decoration: none;
+  position: relative;
+  transition: 0.5s;
+  text-align: right;
+}
+
+.navLinkStickyDark {
+  display: block;
+  padding: 15px 5px;
+  // color: black;
+  color: #f96c85;
   text-decoration: none;
   position: relative;
   transition: 0.5s;
@@ -113,7 +172,7 @@
   padding: 15px 5px;
   padding-left: 3.5rem;
   // color: white;
-  color: white;
+  // color: white;
   // color: black;
   text-decoration: none;
   position: relative;
@@ -137,6 +196,39 @@
   font-size: 40px;
   // color: white;
   color: #4f4f4f;
+}
+
+.titleDark {
+  font-family: "Sacramento", cursive;
+  // display: block;
+  padding: 15px 5px;
+  padding-left: 3.5rem;
+  // color: white;
+  // color: white;
+  // color: black;
+  text-decoration: none;
+  position: relative;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 40px;
+  color: #f96c85;
+  // color: #f96c85;
+}
+
+.titleActiveDark {
+  font-family: "Sacramento", cursive;
+  // display: block;
+  padding: 15px 5px;
+  padding-left: 3.5rem;
+  // color: white;
+  // color: black;
+  text-decoration: none;
+  position: relative;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  // color: #4f4f4f;
 }
 
 /*Mobile menu */
@@ -164,6 +256,15 @@
 .projectIconSticky {
   font-size: 1.5rem;
   color: black;
+}
+
+.projectIconDark {
+  color: white;
+}
+
+.projectIconStickyDark {
+  font-size: 1.5rem;
+  color: #f96c85;
 }
 
 .navItem {
@@ -271,6 +372,41 @@
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 
+  .headerDark {
+    display: flex;
+    flex-direction: row;
+    // background: #182848;
+    background: #2c2d30;
+    // background-image: linear-gradient(to top, #2c3e50, #182848);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-right: 1rem;
+    position: fixed;
+    width: 100%;
+    transition: 0.6s;
+    z-index: 100000;
+    // color: #4f4f4f;
+    color: white;
+  }
+
+  .headerStickyDark {
+    background: #2c2d30;
+    z-index: 100000;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-right: 0.5rem;
+    padding-right: 1rem;
+    width: 100%;
+    position: fixed;
+
+    color: #f96c85;
+    display: flex;
+    flex-direction: row;
+    transition: 0.6s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
   .navBarSticky {
     width: 96%;
   }
@@ -295,6 +431,14 @@
     font-size: 49px;
   }
 
+  .titleDark {
+    font-size: 49px;
+  }
+
+  .titleActiveDark {
+    font-size: 49px;
+  }
+
   .switch {
     margin: 0;
     padding-top: 0.5rem;
@@ -308,6 +452,14 @@
   }
 
   .titleActive {
+    padding-left: 1.5rem;
+  }
+
+  .titleDark {
+    padding-left: 1.5rem;
+  }
+
+  .titleActiveDark {
     padding-left: 1.5rem;
   }
 }
