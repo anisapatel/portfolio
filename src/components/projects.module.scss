@@ -23,12 +23,18 @@
 }
 
 .sectionCenter {
-  // width: 95vw;
+  width: 95vw;
   margin: 0 auto;
   max-width: 1170px;
 }
 @media screen and (min-width: 992px) {
   .sectionCenter {
+    width: 95vw;
+    // margin: 0 auto;
+    // max-width: 1170px;
+  }
+
+  .projectsCenter {
     width: 95vw;
     margin: 0 auto;
     max-width: 1170px;

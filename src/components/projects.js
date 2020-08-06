@@ -27,7 +27,11 @@ const Projects = ({ projects }) => {
       <h2 class={projectsStyles.underline} style={{ color: "#f96c85" }}>
         <span>Featured Projects</span>
       </h2>
-      <div className={projectsStyles.sectionCenter}>
+      <div
+        className={
+          (projectsStyles.sectionCenter, projectsStyles.projectsCenter)
+        }
+      >
         {projects.edges.map((project, index) => {
           return (
             <Project key={project.node.id} index={index} {...project.node} />
