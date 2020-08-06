@@ -5,16 +5,25 @@ import { ThemeContext } from "./ThemeProvider"
 
 const Blogs = ({ blogs }) => {
   const state = useContext(ThemeContext)
+  const styleBlogs = {
+    // marginTop: 0,
+    backgroundColor: state.theme.primary,
+
+    // width: "100%",
+    // height: "60px",
+    color: state.theme.color,
+  }
   return (
     <div
-      className={
-        state.theme.type === "light"
-          ? blogsStyles.container
-          : blogsStyles.containerDark
-      }
+      style={styleBlogs}
+      // className={
+      //   state.theme.type === "light"
+      //     ? blogsStyles.container
+      //     : blogsStyles.containerDark
+      // }
     >
       <section className={blogsStyles.section}>
-        <h2 class={blogsStyles.underline}>
+        <h2 class={blogsStyles.underline} style={styleBlogs}>
           <span>Latest Posts</span>
         </h2>
         <div className={(blogsStyles.sectionCenter, blogsStyles.blogsCenter)}>

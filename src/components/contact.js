@@ -8,12 +8,21 @@ const Contact = () => {
   ])
   const [isDisabled, setDisabled] = useState(false)
   const state = useContext(ThemeContext)
+  const styleContacts = {
+    // marginTop: 0,
+    backgroundColor: state.theme.primary,
+
+    // width: "100%",
+    // height: "60px",
+    color: state.theme.text,
+  }
 
   const encode = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
+
   const handleChange = event => {
     setFormState({ ...formState, [event.target.name]: event.target.value })
   }
@@ -35,9 +44,16 @@ const Contact = () => {
   }
 
   return (
-    <div className={contactStyles.contact}>
+    <div className={contactStyles.contact} style={styleContacts}>
       <section className={contactStyles.container}>
-        <article className={contactStyles.form}>
+        <article
+          className={
+            state.theme.type === "light"
+              ? contactStyles.form
+              : contactStyles.formDark
+          }
+          // className={contactStyles.form}
+        >
           <h3>Contact me</h3>
           <form
             name="contact"
@@ -104,7 +120,11 @@ const Contact = () => {
               </label>
             </div>
             <button
-              className={contactStyles.button}
+              className={
+                state.theme.type === "light"
+                  ? contactStyles.button
+                  : contactStyles.buttonDark
+              }
               disabled={isDisabled}
               type="submit"
             >
@@ -123,7 +143,11 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer nofollow"
             type="button"
-            className={contactStyles.a}
+            className={
+              state.theme.type === "light"
+                ? contactStyles.a
+                : contactStyles.aDark
+            }
           >
             anisa_patel@live.co.uk
           </a>

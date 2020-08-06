@@ -1,13 +1,42 @@
-import React from "react"
+import React, { useContext } from "react"
 import { FaShareSquare, FaGithubSquare } from "react-icons/fa"
 import Image from "gatsby-image"
 import projectStyles from "./project.module.scss"
+import { ThemeContext } from "./ThemeProvider"
 
 const Project = ({ description, title, github, url, stack, image, index }) => {
+  const state = useContext(ThemeContext)
+  const styleProject = {
+    // marginTop: 0,
+    // backgroundColor: state.theme.primary,
+
+    // width: "100%",
+    // height: "60px",
+    color: state.theme.color,
+  }
   return (
-    <article className={projectStyles.project}>
-      <Image fluid={image.fluid} className={projectStyles.projectImg} />
-      <div className={projectStyles.projectInfo}>
+    <article
+      className={
+        state.theme.type === "light"
+          ? projectStyles.project
+          : projectStyles.projectDark
+      }
+    >
+      <Image
+        fluid={image.fluid}
+        className={
+          state.theme.type === "light"
+            ? projectStyles.projectImg
+            : projectStyles.projectImgDark
+        }
+      />
+      <div
+        className={
+          state.theme.type === "light"
+            ? projectStyles.projectInfo
+            : projectStyles.projectInfoDark
+        }
+      >
         {/* <span className={projectStyles.projectNumber}>0{index + 1}</span> */}
         <h3 className={projectStyles.title}>{title}</h3>
         <p className={projectStyles.projectDesc}>{description.description}</p>

@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
 import blogStyles from "./blog.module.scss"
+import { ThemeContext } from "./ThemeProvider"
 
 const BlogPage = ({
   title,
@@ -11,11 +12,33 @@ const BlogPage = ({
   id,
   description,
 }) => {
+  const state = useContext(ThemeContext)
+  const styleBlog = {
+    // marginTop: 0,
+    backgroundColor: state.theme.primary,
+
+    // width: "100%",
+    // height: "60px",
+    color: state.theme.text,
+  }
   return (
     <Link to={`/blog/${slug}`} className={blogStyles.blog} key={id}>
-      <article className={blogStyles.article}>
+      <article
+        style={styleBlog}
+        className={
+          state.theme.type === "light"
+            ? blogStyles.article
+            : blogStyles.articleDark
+        }
+      >
         <Image fluid={blogImage.fluid} className={blogStyles.blogImg} />
-        <div className={blogStyles.blogCard}>
+        <div
+          className={
+            state.theme.type === "light"
+              ? blogStyles.blogCard
+              : blogStyles.blogCardDark
+          }
+        >
           <h4>{title}</h4>
           <p className={blogStyles.description}>{description.description}</p>
           <div className={blogStyles.blogFooter}>

@@ -27,7 +27,7 @@ const Header = () => {
 
   const styleHeader = {
     // marginTop: 0,
-    // backgroundColor: state.theme.primary,
+    backgroundColor: state.theme.primary,
     // width: "100%",
     // height: "60px",
     // color: state.theme.text,
@@ -56,6 +56,7 @@ const Header = () => {
 
   return (
     <header
+      style={styleHeader}
       className={
         state.theme.type === "light"
           ? isSticky

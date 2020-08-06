@@ -94,6 +94,64 @@
   }
 }
 
+.formDark {
+  text-align: center;
+  width: 95vw;
+  max-width: 35rem;
+  padding: 1rem;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border: 0.1px hidden #2c2d30;
+  -webkit-box-shadow: 1px 5px 15px 2px #2c2d30;
+  box-shadow: 1px 5px 15px 2px #2c2d30;
+  background-color: #2c2d30;
+
+  input {
+    display: block;
+    width: 100%;
+    border: none;
+    margin-bottom: 1.25rem;
+    margin: 1rem 0;
+    padding: 12px 18px;
+    // background-color: #4f4f4f;
+    // background-color: #333438;
+    background-color: #424242;
+
+    border-radius: 6px;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    margin-bottom: 1.25rem;
+    border-radius: 6px;
+    // text-transform: uppercase;
+    // background-color: #4f4f4f;
+    background-color: #424242;
+    // background-color: #333438;
+    margin: 8px 0;
+    padding: 12px 18px;
+  }
+
+  textarea::placeholder {
+    text-transform: uppercase;
+  }
+
+  input::placeholder {
+    text-transform: uppercase;
+  }
+
+  input:focus {
+    outline: 2px solid grey;
+    border-radius: 6px;
+  }
+  textarea:focus {
+    outline: 2px solid grey;
+    border-radius: 6px;
+  }
+}
+
 .formFields {
   padding: 0.5rem;
 }
@@ -106,6 +164,13 @@
   padding-top: 1rem;
   text-align: center;
   color: #4f4f4f;
+}
+
+.formDark h3 {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+  color: #f96c85;
 }
 
 .button {
@@ -149,12 +214,53 @@ h3 {
   background-color: lighten($color: grey, $amount: 20);
 }
 
+.buttonDark {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  // background-color: grey;
+  background-image: linear-gradient(
+    to bottom,
+    #d76d77,
+    #ee9ca7,
+    #ee9ca7,
+    #ffafbd
+  );
+  // background: #626262;
+  // color: white;
+  font-size: 16px;
+}
+
+.buttonDark:hover {
+  // background-color: lighten($color: grey, $amount: 4);
+  background-image: linear-gradient(to top, #d76d77, #ee9ca7, #ee9ca7, #ffafbd);
+}
+h3 {
+  // color: #102a42;
+}
+
+.buttonDark:disabled {
+  background-color: lighten($color: grey, $amount: 20);
+}
+
 .a {
   color: black;
 }
 
 .a:hover {
-  background-image: linear-gradient(to right, #ddd6f3, #faaca8);
+  color: #f96c85;
+}
+
+.aDark {
+  color: white;
+}
+
+.aDark:hover {
+  color: #f96c85;
 }
 
 @media screen and (min-width: 992px) {
