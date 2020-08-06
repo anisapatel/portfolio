@@ -16,6 +16,8 @@
   border: 0.1px hidden #b7b7b7;
   -webkit-box-shadow: 1px 5px 15px 2px #b7b7b7;
   box-shadow: 1px 5px 15px 2px #b7b7b7;
+
+  padding-bottom: 4rem;
 }
 
 .projectDark {
@@ -36,6 +38,7 @@
   border: 0.1px hidden #2c2d30;
   -webkit-box-shadow: 1px 5px 15px 2px #2c2d30;
   box-shadow: 1px 5px 15px 2px #2c2d30;
+  padding-bottom: 4rem;
 }
 
 .projectImg {
@@ -127,14 +130,19 @@
   // -moz-box-shadow: -2px 8px 13px -1px #b7b7b7;
   // box-shadow: -2px 8px 13px -1px #b7b7b7;
   // text-align: center;
-  padding: 1.5rem 1.5rem;
-  height: auto;
+  // padding: 1.5rem 1.5rem;
+  // height: auto;
   text-align: left;
   // display: grid;
   // grid-template-rows: auto 1fr auto;
   // background-color: whitesmoke;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  height: auto;
+  padding-left: 2.5rem;
+  padding-top: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .projectInfoDark {
@@ -145,8 +153,8 @@
   // -moz-box-shadow: -2px 8px 13px -1px #b7b7b7;
   // box-shadow: -2px 8px 13px -1px #b7b7b7;
   // text-align: center;
-  padding: 1.5rem 1.5rem;
-  height: auto;
+  // padding: 1.5rem 1.5rem;
+  // height: auto;
   text-align: left;
   // display: grid;
   // grid-template-rows: auto 1fr auto;
@@ -154,6 +162,11 @@
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   background-color: #424242;
+  height: auto;
+  padding-left: 2.5rem;
+  padding-top: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .link {

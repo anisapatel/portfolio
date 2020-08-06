@@ -1,8 +1,8 @@
 .section {
   // padding: 5rem 0rem;
   padding-top: 1rem;
-  // margin-left: 1rem;
-  // margin-right: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 // .sectionDark {
@@ -23,13 +23,13 @@
 }
 
 .sectionCenter {
-  width: 100%;
+  width: 95vw;
+  margin: 0 auto;
   max-width: 1170px;
 }
 @media screen and (min-width: 992px) {
   .sectionCenter {
     width: 95vw;
-    margin: 0 auto;
   }
 
   .underline {

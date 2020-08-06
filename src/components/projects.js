@@ -12,7 +12,7 @@ const Projects = ({ projects }) => {
 
     // width: "100%",
     // height: "60px",
-    color: state.theme.color,
+    color: state.theme.text,
   }
 
   return (
@@ -24,7 +24,7 @@ const Projects = ({ projects }) => {
       }
       style={styleProject}
     >
-      <h2 class={projectsStyles.underline} style={styleProject}>
+      <h2 class={projectsStyles.underline} style={{ color: "#f96c85" }}>
         <span>Featured Projects</span>
       </h2>
       <div className={projectsStyles.sectionCenter}>
