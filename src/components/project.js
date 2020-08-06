@@ -12,7 +12,7 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
 
     // width: "100%",
     // height: "60px",
-    color: state.theme.color,
+    color: state.theme.text,
   }
   return (
     <article
@@ -51,6 +51,7 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
             target="_blank"
             rel="noreferrer"
             className={projectStyles.links}
+            style={styleProject}
           >
             <div>
               <FaGithubSquare className={projectStyles.projectIcon} />
@@ -62,6 +63,7 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
             target="_blank"
             rel="noreferrer"
             className={projectStyles.links}
+            style={styleProject}
           >
             <div>
               <FaShareSquare className={projectStyles.projectIcon} />
