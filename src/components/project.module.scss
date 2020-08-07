@@ -401,24 +401,7 @@ h3 {
     grid-row: 1 / 1;
     text-align: left;
   }
-  .project:nth-of-type(even) .projectImgDark {
-    grid-column: 5 / -1;
-    grid-row: 1 / 1;
-  }
-  .project:nth-of-type(even) .projectInfoDark {
-    grid-column: 2 / span 7;
-    grid-row: 1 / 1;
-    text-align: left;
-  }
-  .projectDark:nth-of-type(even) .projectImg {
-    grid-column: 5 / -1;
-    grid-row: 1 / 1;
-  }
-  .projectDark:nth-of-type(even) .projectInfo {
-    grid-column: 2 / span 7;
-    grid-row: 1 / 1;
-    text-align: left;
-  }
+
   .projectDark:nth-of-type(even) .projectImgDark {
     grid-column: 5 / -1;
     grid-row: 1 / 1;
@@ -428,6 +411,7 @@ h3 {
     grid-row: 1 / 1;
     text-align: left;
   }
+
   h3 {
     margin-top: 1.5rem;
     // color: #102a42;
