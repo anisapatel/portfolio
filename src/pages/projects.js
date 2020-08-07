@@ -4,6 +4,7 @@ import Head from "../components/head"
 import Projects from "../components/projects"
 import projectsStyles from "../pages/projects.module.scss"
 import { graphql, useStaticQuery } from "gatsby"
+import { ThemeContextProvider } from "../components/ThemeProvider"
 
 const ProjectsPage = () => {
   const data = useStaticQuery(graphql`
@@ -30,12 +31,14 @@ const ProjectsPage = () => {
     }
   `)
   return (
+    // <ThemeContextProvider>
     <Layout>
       <Head title="Projects" />
       <section className={projectsStyles.section}>
         <Projects projects={data.allContentfulProjects} />
       </section>
     </Layout>
+    // </ThemeContextProvider>
   )
 }
 

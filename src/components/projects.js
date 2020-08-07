@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import projectsStyles from "../components/projects.module.scss"
 import Project from "../components/project"
 import { ThemeContext } from "./ThemeProvider"
+import { ThemeContextProvider } from "../components/ThemeProvider"
 
 const Projects = ({ projects }) => {
   const state = useContext(ThemeContext)
@@ -12,7 +13,7 @@ const Projects = ({ projects }) => {
 
     // width: "100%",
     // height: "60px",
-    color: state.theme.text,
+    color: state.theme.color,
   }
 
   return (
@@ -24,7 +25,7 @@ const Projects = ({ projects }) => {
       }
       style={styleProject}
     >
-      <h2 class={projectsStyles.underline} style={{ color: "#f96c85" }}>
+      <h2 class={projectsStyles.underline} style={styleProject}>
         <span>Featured Projects</span>
       </h2>
       <div

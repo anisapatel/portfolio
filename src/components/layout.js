@@ -3,14 +3,17 @@ import Header from "./header"
 import Footer from "./footer"
 import "../styles/index.scss"
 import layoutStyles from "./layout.module.scss"
+import { ThemeContextProvider } from "../components/ThemeProvider"
 
 const Layout = props => {
   return (
-    <>
-      <Header />
-      {props.children}
-      <Footer />
-    </>
+    <ThemeContextProvider>
+      <>
+        <Header />
+        {props.children}
+        <Footer />
+      </>
+    </ThemeContextProvider>
   )
 }
 
