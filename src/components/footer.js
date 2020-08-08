@@ -25,7 +25,10 @@ const Footer = () => {
     >
       <div>
         <Social />
-        <h4>Made with &#10084; © 2020 - {data.site.siteMetadata.author}. </h4>
+        <h4>
+          Made with &#10084; © {new Date().getFullYear()} -{" "}
+          {data.site.siteMetadata.author}.{" "}
+        </h4>
         <p>
           Built with GatsbyJS, React and GraphQL. The source code can be found
           on{" "}

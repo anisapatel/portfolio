@@ -7,14 +7,14 @@ import { ThemeContextProvider } from "../components/ThemeProvider"
 
 const ContactPage = () => {
   return (
-    <ThemeContextProvider>
-      <Layout>
-        <Head title="Contact" />
-        <section className={contactStyles.section}>
-          <Contact />
-        </section>
-      </Layout>
-    </ThemeContextProvider>
+    // <ThemeContextProvider>
+    <Layout>
+      <Head title="Contact" />
+      <section className={contactStyles.section}>
+        <Contact />
+      </section>
+    </Layout>
+    // </ThemeContextProvider>
   )
 }
 

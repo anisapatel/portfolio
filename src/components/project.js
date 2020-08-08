@@ -31,6 +31,7 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
         }
       />
       <div
+        style={styleProject}
         className={
           state.theme.type === "light"
             ? projectStyles.projectInfo

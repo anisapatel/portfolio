@@ -7,13 +7,13 @@ import { ThemeContextProvider } from "../components/ThemeProvider"
 
 const Layout = props => {
   return (
-    <ThemeContextProvider>
-      <>
-        <Header />
-        {props.children}
-        <Footer />
-      </>
-    </ThemeContextProvider>
+    // <ThemeContextProvider>
+    <>
+      <Header />
+      {props.children}
+      <Footer />
+    </>
+    // </ThemeContextProvider>
   )
 }
 

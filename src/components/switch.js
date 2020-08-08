@@ -1,22 +1,27 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import switchStyles from "../components/switch.module.scss"
 import { ThemeContext } from "./ThemeProvider"
 import { FaSun, FaMoon } from "react-icons/fa"
 
 const Switch = () => {
-  const [value, setValue] = useState(false)
+  // const [value, setValue] = useState(false)
   const state = useContext(ThemeContext)
+  //   const stickyValue = window.localStorage.getItem(value)
 
-  const handleToggle = () => {
-    setValue(!value)
-  }
+  // useEffect(() => {
+  //   window.localStorage.setItem("theme")
+  // })
+
+  // const handleToggle = () => {
+  //   setValue(!value)
+  // }
 
   return (
     // <div className={switchStyles.switchSection}>
     <>
       <input
-        checked={value}
-        onChange={handleToggle}
+        checked={state.theme.type === "dark"}
+        // onChange={handleToggle}
         className={switchStyles.switch}
         id={`react-switch-new`}
         type="checkbox"
@@ -26,12 +31,12 @@ const Switch = () => {
       />
       <label
         style={{
-          background: value && "#2a5298",
+          background: state.theme.type === "dark" && "#2a5298",
         }}
         className={switchStyles.switchLabel}
         htmlFor={`react-switch-new`}
       >
-        {value ? (
+        {state.theme.type === "dark" ? (
           <FaMoon
             size="1em"
             color="white"

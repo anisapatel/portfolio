@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 export const ThemeContext = React.createContext({
   theme: {
     type: "light",
     primary: "white",
-    text: "#black",
+    text: "black",
   },
   setTheme: () => {},
 })
@@ -23,7 +23,6 @@ export const ThemeContextProvider = props => {
       text: "#d0d0d1",
       color: "#f96c85",
       transition: "primary 0.3s, text 0.3s",
-      textColor: "#6c757d",
     },
   }
 
@@ -37,6 +36,17 @@ export const ThemeContextProvider = props => {
   }
 
   const [state, setState] = useState(initState)
+
+  // useEffect(() => {
+  //   function loadTheme() {
+  //     const theme = localStorage.getItem("theme")
+  //     return theme.light || theme.dark
+  //   }
+  //   setTheme(loadTheme())
+  // }, [])
+  // useEffect(() => {
+  //   localStorage.setItem("theme", theme)
+  // }, [theme])
 
   return (
     <ThemeContext.Provider value={state}>

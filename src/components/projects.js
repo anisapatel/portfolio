@@ -10,7 +10,6 @@ const Projects = ({ projects }) => {
   const styleProject = {
     // marginTop: 0,
     backgroundColor: state.theme.primary,
-
     // width: "100%",
     // height: "60px",
     color: state.theme.color,

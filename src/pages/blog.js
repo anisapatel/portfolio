@@ -31,14 +31,12 @@ const BlogsPage = () => {
     }
   `)
   return (
-    <ThemeContextProvider>
-      <Layout>
-        <Head title="Blog" />
-        <section className={blogStyles.section}>
-          <Blogs blogs={data.allContentfulBlogPost} />
-        </section>
-      </Layout>
-    </ThemeContextProvider>
+    <Layout>
+      <Head title="Blog" />
+      <section className={blogStyles.section}>
+        <Blogs blogs={data.allContentfulBlogPost} />
+      </section>
+    </Layout>
   )
 }
 
