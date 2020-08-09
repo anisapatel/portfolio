@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 export const ThemeContext = React.createContext({
   theme: {
@@ -36,17 +36,6 @@ export const ThemeContextProvider = props => {
   }
 
   const [state, setState] = useState(initState)
-
-  // useEffect(() => {
-  //   function loadTheme() {
-  //     const theme = localStorage.getItem("theme")
-  //     return theme.light || theme.dark
-  //   }
-  //   setTheme(loadTheme())
-  // }, [])
-  // useEffect(() => {
-  //   localStorage.setItem("theme", theme)
-  // }, [theme])
 
   return (
     <ThemeContext.Provider value={state}>

@@ -4,27 +4,18 @@ import { ThemeContext } from "./ThemeProvider"
 import { FaSun, FaMoon } from "react-icons/fa"
 
 const Switch = () => {
-  // const [value, setValue] = useState(false)
   const state = useContext(ThemeContext)
-  //   const stickyValue = window.localStorage.getItem(value)
-
-  // useEffect(() => {
-  //   window.localStorage.setItem("theme")
-  // })
-
-  // const handleToggle = () => {
-  //   setValue(!value)
-  // }
 
   return (
     // <div className={switchStyles.switchSection}>
     <>
       <input
         checked={state.theme.type === "dark"}
-        // onChange={handleToggle}
+        // check={value}
         className={switchStyles.switch}
         id={`react-switch-new`}
         type="checkbox"
+        // onChange={handleToggle}
         onClick={() => {
           state.setTheme(state.theme.type)
         }}
