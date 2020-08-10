@@ -18,7 +18,7 @@
   background-color: #fdfaf5;
   font-size: 1em;
 }
-p {
+.text {
   font-size: 1.5rem;
   padding-bottom: 1rem;
 }
@@ -60,20 +60,12 @@ button {
     #d76d77,
     #ee9ca7,
     #ee9ca7,
-    #ffafbd,
-    #ffdde1
+    #ffafbd
   );
 }
 
 button:hover {
-  background-image: linear-gradient(
-    to top,
-    #d76d77,
-    #ee9ca7,
-    #ee9ca7,
-    #ffafbd,
-    #ffdde1
-  );
+  background-image: linear-gradient(to top, #d76d77, #ee9ca7, #ee9ca7, #ffafbd);
 }
 
 @media screen and (min-width: 992px) {
