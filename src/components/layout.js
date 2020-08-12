@@ -3,9 +3,11 @@ import Header from "./header"
 import Footer from "./footer"
 import "../styles/index.scss"
 import layoutStyles from "./layout.module.scss"
-import { ThemeContextProvider } from "../components/ThemeProvider"
+
+// import { ThemeContext } from "./ThemeProvider"
 
 const Layout = props => {
+  // const state = useContext(ThemeContext)
   return (
     // <ThemeContextProvider>
     <>

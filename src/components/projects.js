@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import projectsStyles from "../components/projects.module.scss"
 import Project from "../components/project"
 import { ThemeContext } from "./ThemeProvider"
-import { ThemeContextProvider } from "../components/ThemeProvider"
+import FadeInSection from "../components/animate"
 
 const Projects = ({ projects }) => {
   const state = useContext(ThemeContext)
@@ -27,6 +27,7 @@ const Projects = ({ projects }) => {
       <h2 class={projectsStyles.underline} style={styleProject}>
         <span>Featured Projects</span>
       </h2>
+
       <div
         className={
           (projectsStyles.sectionCenter, projectsStyles.projectsCenter)
@@ -34,7 +35,9 @@ const Projects = ({ projects }) => {
       >
         {projects.edges.map((project, index) => {
           return (
-            <Project key={project.node.id} index={index} {...project.node} />
+            <FadeInSection>
+              <Project key={project.node.id} index={index} {...project.node} />
+            </FadeInSection>
           )
         })}
       </div>

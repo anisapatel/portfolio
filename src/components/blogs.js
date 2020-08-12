@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import Blog from "../components/blog"
 import blogsStyles from "../components/blogs.module.scss"
 import { ThemeContext } from "./ThemeProvider"
+import FadeInSection from "../components/animate"
 
 const Blogs = ({ blogs }) => {
   const state = useContext(ThemeContext)
@@ -28,7 +29,11 @@ const Blogs = ({ blogs }) => {
         </h2>
         <div className={(blogsStyles.sectionCenter, blogsStyles.blogsCenter)}>
           {blogs.edges.map((item, index) => {
-            return <Blog key={item.node.id} index={index} {...item.node} />
+            return (
+              <FadeInSection>
+                <Blog key={item.node.id} index={index} {...item.node} />
+              </FadeInSection>
+            )
           })}
         </div>
       </section>

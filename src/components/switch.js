@@ -15,7 +15,6 @@ const Switch = () => {
         className={switchStyles.switch}
         id={`react-switch-new`}
         type="checkbox"
-        // onChange={handleToggle}
         onClick={() => {
           state.setTheme(state.theme.type)
         }}

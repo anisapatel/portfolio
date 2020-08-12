@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import blogStyles from "./blog.module.scss"
 import { ThemeContext } from "./ThemeProvider"
+import FadeInSection from "../components/animate"
 
 const BlogPage = ({
   title,

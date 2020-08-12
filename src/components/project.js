@@ -30,6 +30,7 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
             : projectStyles.projectImgDark
         }
       />
+
       <div
         style={styleProject}
         className={
