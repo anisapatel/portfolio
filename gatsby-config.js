@@ -28,6 +28,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
+    `gatsby-transformer-inline-svg`,
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
