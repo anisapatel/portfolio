@@ -97,6 +97,9 @@ const Header = () => {
           <li className={navClassNames}>
             <Link
               to="/"
+              activeStyle={{
+                textDecoration: "underline",
+              }}
               className={
                 state.theme.type === "light"
                   ? isSticky
@@ -112,6 +115,9 @@ const Header = () => {
           </li>
           <li className={navClassNames}>
             <Link
+              activeStyle={{
+                textDecoration: "underline",
+              }}
               className={
                 state.theme.type === "light"
                   ? isSticky
@@ -128,6 +134,9 @@ const Header = () => {
           </li>
           <li className={navClassNames}>
             <Link
+              activeStyle={{
+                textDecoration: "underline",
+              }}
               className={
                 state.theme.type === "light"
                   ? isSticky
@@ -144,6 +153,9 @@ const Header = () => {
           </li>
           <li className={navClassNames}>
             <Link
+              activeStyle={{
+                textDecoration: "underline",
+              }}
               className={
                 state.theme.type === "light"
                   ? isSticky

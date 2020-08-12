@@ -4,6 +4,7 @@ import aboutStyles from "../pages/about.module.scss"
 import { ThemeContext } from "../components/ThemeProvider"
 import Switch from "../components/switch"
 import FadeInSection from "../components/animate"
+import Type from "../components/type"
 
 const AboutPage = () => {
   const state = useContext(ThemeContext)
@@ -28,7 +29,7 @@ const AboutPage = () => {
         <section className={aboutStyles.section}>
           <div className={(aboutStyles.sectionCenter, aboutStyles.aboutCenter)}>
             <h2 className={aboutStyles.h2} style={about}>
-              Hi! I'm Anisa
+              <Type textToType=" Hi! I'm Anisa" delay={100} loop={false} />
             </h2>
             <article className={aboutStyles.text}>
               <p>
