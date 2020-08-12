@@ -51,6 +51,16 @@ module.exports = {
         icon: "src/images/circle-cropped.png",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Sacramento`,
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
   ],
 }
 
