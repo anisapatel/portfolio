@@ -57,11 +57,7 @@ module.exports = {
         fonts: [
           {
             family: `Sacramento`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Sacramento`,
-            // subsets: [`latin`]
+            variants: [`400`],
           },
         ],
       },
