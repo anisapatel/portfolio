@@ -85,10 +85,10 @@
   text-decoration: none;
   letter-spacing: 1px;
   // word-spacing: 2px;
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
+  // font-weight: normal;
+  // font-style: normal;
+  // font-variant: normal;
+  // text-transform: none;
 }
 .navLink {
   display: block;
@@ -166,12 +166,13 @@
   position: relative;
   text-align: center;
   transition: 0.6s;
+  font-family: "Sacramento", cursive;
 }
 
 .title {
   font-family: "Sacramento", cursive;
   // display: block;
-  padding: 15px 5px;
+  // padding: 15px 5px;
   padding-left: 3.5rem;
   // color: white;
   // color: white;
@@ -180,14 +181,14 @@
   position: relative;
   transition: 0.5s;
   text-align: center;
-  font-size: 40px;
+  font-size: 2rem;
   color: #f96c85;
 }
 
 .titleActive {
   font-family: "Sacramento", cursive;
   // display: block;
-  padding: 15px 5px;
+  // padding: 15px 5px;
   padding-left: 3.5rem;
   // color: white;
   // color: black;
@@ -195,7 +196,7 @@
   position: relative;
   transition: 0.5s;
   text-align: center;
-  font-size: 40px;
+  font-size: 2rem;
   // color: white;
   color: #4f4f4f;
 }
@@ -203,7 +204,7 @@
 .titleDark {
   font-family: "Sacramento", cursive;
   // display: block;
-  padding: 15px 5px;
+  // padding: 15px 5px;
   padding-left: 3.5rem;
   // color: white;
   // color: white;
@@ -212,7 +213,7 @@
   position: relative;
   transition: 0.5s;
   text-align: center;
-  font-size: 40px;
+  font-size: 2rem;
   color: #f96c85;
   // color: #f96c85;
 }
@@ -220,7 +221,7 @@
 .titleActiveDark {
   font-family: "Sacramento", cursive;
   // display: block;
-  padding: 15px 5px;
+  // padding: 15px 5px;
   padding-left: 3.5rem;
   // color: white;
   // color: black;
@@ -228,7 +229,7 @@
   position: relative;
   transition: 0.5s;
   text-align: center;
-  font-size: 40px;
+  font-size: 2rem;
   color: white;
   // color: #4f4f4f;
 }
@@ -236,9 +237,12 @@
 /*Mobile menu */
 
 .switch {
-  margin: 0;
+  // margin: 0;
   padding-top: 0.5rem;
   padding-right: 1rem;
+  display: flex;
+  // flex-wrap: wrap;
+  align-self: center;
 }
 
 .toggle {
@@ -281,6 +285,7 @@
   order: 2;
   width: 100%;
   text-align: center;
+  display: none;
 }
 
 /* tablet menu */
