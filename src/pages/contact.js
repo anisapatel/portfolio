@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import Contact from "../components/contact"
 import contactStyles from "../pages/contact.module.scss"
-import { ThemeContextProvider } from "../components/ThemeProvider"
 
 const ContactPage = () => {
   return (

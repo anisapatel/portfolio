@@ -58,6 +58,7 @@ const NotFound = () => {
           <div className={errorStyles.sectionCenter}>
             <img
               src={data.contentfulAsset.file.url}
+              alt={`woman walking through the park`}
               className={errorStyles.image}
             />
             {/* <div

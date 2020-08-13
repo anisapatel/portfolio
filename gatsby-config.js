@@ -52,14 +52,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Sacramento`,
-            variants: [`400`],
-          },
-        ],
+        fonts: [`Sacramento`],
+        display: "swap",
       },
     },
   ],

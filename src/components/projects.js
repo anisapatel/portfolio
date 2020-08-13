@@ -24,7 +24,7 @@ const Projects = ({ projects }) => {
       }
       style={styleProject}
     >
-      <h2 class={projectsStyles.underline} style={styleProject}>
+      <h2 className={projectsStyles.underline} style={styleProject}>
         <span>Featured Projects</span>
       </h2>
 
@@ -35,8 +35,8 @@ const Projects = ({ projects }) => {
       >
         {projects.edges.map((project, index) => {
           return (
-            <FadeInSection>
-              <Project key={project.node.id} index={index} {...project.node} />
+            <FadeInSection key={project.node.id}>
+              <Project index={index} {...project.node} />
             </FadeInSection>
           )
         })}

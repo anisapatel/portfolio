@@ -4,7 +4,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import blogStyles from "../pages/blog.module.scss"
 import Head from "../components/head"
 import Blogs from "../components/blogs"
-import { ThemeContextProvider } from "../components/ThemeProvider"
 
 const BlogsPage = () => {
   // tagged template literal so you can useStaticQuery to query the graphql api

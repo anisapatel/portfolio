@@ -2,7 +2,6 @@ import React, { useContext } from "react"
 import { Link } from "gatsby"
 import aboutStyles from "../pages/about.module.scss"
 import { ThemeContext } from "../components/ThemeProvider"
-import Switch from "../components/switch"
 import FadeInSection from "../components/animate"
 import Type from "../components/type"
 

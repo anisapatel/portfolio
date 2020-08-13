@@ -1,10 +1,9 @@
-import React, { useContext } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import Projects from "../components/projects"
 import projectsStyles from "../pages/projects.module.scss"
 import { graphql, useStaticQuery } from "gatsby"
-import { ThemeContextProvider } from "../components/ThemeProvider"
 
 const ProjectsPage = () => {
   const data = useStaticQuery(graphql`

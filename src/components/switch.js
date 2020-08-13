@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext } from "react"
 import switchStyles from "../components/switch.module.scss"
 import { ThemeContext } from "./ThemeProvider"
 import { FaSun, FaMoon } from "react-icons/fa"
@@ -12,6 +12,7 @@ const Switch = () => {
       <input
         checked={state.theme.type === "dark"}
         // check={value}
+
         className={switchStyles.switch}
         id={`react-switch-new`}
         type="checkbox"

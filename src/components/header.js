@@ -10,8 +10,6 @@ const Header = () => {
   const [isSticky, setSticky] = useState(false)
   const activeNavItem = headerStyles.activeNavItem
   const navItem = headerStyles.navItem
-  const switchBar = headerStyles.switch
-  const switchSticky = headerStyles.switchSticky
   const navClassNames = isOpen ? activeNavItem : navItem
   const navBar = headerStyles.navBar
   const navBarSticky = headerStyles.navBarSticky
@@ -75,20 +73,11 @@ const Header = () => {
               className={
                 state.theme.type === "light"
                   ? isSticky
-                    ? navLinkSticky
-                    : navLink
+                    ? (navLinkSticky, headerStyles.title)
+                    : (navLink, headerStyles.titleActive)
                   : isSticky
-                  ? headerStyles.navLinkStickyDark
-                  : headerStyles.navLinkDark
-              }
-              className={
-                state.theme.type === "light"
-                  ? isSticky
-                    ? headerStyles.title
-                    : headerStyles.titleActive
-                  : isSticky
-                  ? headerStyles.titleDark
-                  : headerStyles.titleActiveDark
+                  ? (headerStyles.navLinkStickyDark, headerStyles.titleDark)
+                  : (headerStyles.navLinkDark, headerStyles.titleActiveDark)
               }
             >
               {data.site.siteMetadata.title}
