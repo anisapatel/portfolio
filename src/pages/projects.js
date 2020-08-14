@@ -30,14 +30,12 @@ const ProjectsPage = () => {
     }
   `)
   return (
-    // <ThemeContextProvider>
     <Layout>
       <Head title="Projects" />
       <section className={projectsStyles.section}>
         <Projects projects={data.allContentfulProjects} />
       </section>
     </Layout>
-    // </ThemeContextProvider>
   )
 }
 

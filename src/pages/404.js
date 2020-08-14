@@ -45,10 +45,7 @@ const NotFound = () => {
   // }
 
   const style404 = {
-    // marginTop: 0,
     backgroundColor: state.theme.primary,
-    // width: "100%",
-    // height: "60px",
     color: state.theme.color,
   }
   return (

@@ -7,11 +7,6 @@ import { ThemeContext } from "./ThemeProvider"
 const Project = ({ description, title, github, url, stack, image, index }) => {
   const state = useContext(ThemeContext)
   const styleProject = {
-    // marginTop: 0,
-    // backgroundColor: state.theme.primary,
-
-    // width: "100%",
-    // height: "60px",
     color: state.theme.text,
   }
   return (
@@ -39,7 +34,6 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
             : projectStyles.projectInfoDark
         }
       >
-        {/* <span className={projectStyles.projectNumber}>0{index + 1}</span> */}
         <h3 className={projectStyles.title}>{title}</h3>
         <p className={projectStyles.projectDesc}>{description.description}</p>
         <div className={projectStyles.projectStack}>

@@ -3,18 +3,9 @@
   flex-direction: column-reverse;
   padding-top: 3rem;
   padding-bottom: 3rem;
-
-  // padding-left: 7rem;
 }
 
 .email {
-  // justify-content: top;
-  // align-content: flex-start;
-  // padding-left: 4rem;
-  // // padding-top: 12rem;
-  // margin-top: 15rem;
-  // margin-right: 5rem;
-  // // padding-right: 8rem;
   text-align: center;
   font-size: 16px;
   margin-right: 1rem;
@@ -22,17 +13,9 @@
   margin-top: 2rem;
 }
 
-// .text {
-//   display: block;
-// }
-// p {
-//   display: block;
-//   padding-left: 5rem;
-// }
 .container {
   display: grid;
   place-items: center;
-  // padding: 5rem 0;
   padding-top: 2rem;
 }
 
@@ -65,7 +48,6 @@
     border: none;
     margin-bottom: 1.25rem;
     border-radius: 6px;
-    // text-transform: uppercase;
     margin: 8px 0;
     padding: 12px 18px;
   }
@@ -108,8 +90,6 @@
     margin-bottom: 1.25rem;
     margin: 1rem 0;
     padding: 12px 18px;
-    // background-color: #4f4f4f;
-    // background-color: #333438;
     background-color: #424242;
 
     border-radius: 6px;
@@ -120,10 +100,7 @@
     border: none;
     margin-bottom: 1.25rem;
     border-radius: 6px;
-    // text-transform: uppercase;
-    // background-color: #4f4f4f;
     background-color: #424242;
-    // background-color: #333438;
     margin: 8px 0;
     padding: 12px 18px;
   }
@@ -149,9 +126,6 @@
 .formFields {
   padding: 0.5rem;
 }
-.form:hover {
-  // box-shadow: var(--dark-shadow);
-}
 
 .form h3 {
   padding-bottom: 1rem;
@@ -175,7 +149,6 @@
   outline: none;
   border: none;
   border-radius: 6px;
-  // background-color: grey;
   background-image: linear-gradient(
     to bottom,
     #d76d77,
@@ -184,13 +157,10 @@
     #ffafbd,
     #ffdde1
   );
-  // background: #626262;
-  // color: white;
   font-size: 16px;
 }
 
 .button:hover {
-  // background-color: lighten($color: grey, $amount: 4);
   background-image: linear-gradient(
     to top,
     #d76d77,
@@ -199,9 +169,6 @@
     #ffafbd,
     #ffdde1
   );
-}
-h3 {
-  // color: #102a42;
 }
 
 .button:disabled {
@@ -216,7 +183,6 @@ h3 {
   outline: none;
   border: none;
   border-radius: 6px;
-  // background-color: grey;
   background-image: linear-gradient(
     to bottom,
     #d76d77,
@@ -224,17 +190,11 @@ h3 {
     #ee9ca7,
     #ffafbd
   );
-  // background: #626262;
-  // color: white;
   font-size: 16px;
 }
 
 .buttonDark:hover {
-  // background-color: lighten($color: grey, $amount: 4);
   background-image: linear-gradient(to top, #d76d77, #ee9ca7, #ee9ca7, #ffafbd);
-}
-h3 {
-  // color: #102a42;
 }
 
 .buttonDark:disabled {
@@ -269,11 +229,10 @@ h3 {
     align-content: center;
 
     padding-left: 4rem;
-    // padding-top: 12rem;
+
     padding-top: 10rem;
     padding-right: 7rem;
-    // padding-right: 1rem;
-    // padding-right: 8rem;
+
     text-align: center;
     font-size: 18px;
   }

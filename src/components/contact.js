@@ -10,11 +10,7 @@ const Contact = () => {
   const [isDisabled, setDisabled] = useState(false)
   const state = useContext(ThemeContext)
   const styleContacts = {
-    // marginTop: 0,
     backgroundColor: state.theme.primary,
-
-    // width: "100%",
-    // height: "60px",
     color: state.theme.text,
   }
 
@@ -54,7 +50,6 @@ const Contact = () => {
                 ? contactStyles.form
                 : contactStyles.formDark
             }
-            // className={contactStyles.form}
           >
             <h3>Contact me</h3>
             <form

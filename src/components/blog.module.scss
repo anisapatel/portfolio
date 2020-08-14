@@ -3,24 +3,13 @@
   padding-bottom: 3rem;
   text-decoration: none;
   letter-spacing: 1px;
-  // word-spacing: 2px;
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
   text-transform: none;
-  // background-color: transparent;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  // animation-duration: 1s;
-  // animation-fill-mode: both;
-  // -webkit-animation-duration: 1s;
-  // -webkit-animation-fill-mode: both;
-  // opacity: 0;
-  // animation-name: fadeInUp;
-  // -webkit-animation-name: fadeInUp;
-
-  // color: rgba(0, 0, 0, 0.87);
 
   .article {
     -webkit-border-radius: 6px;
@@ -34,10 +23,7 @@
 
   .article:hover {
     transform: scale(1.02);
-    // color: grey;
-    // color: #f96c85;
     color: #4f4f4f;
-    // transform: translateY(-2px);
   }
 
   article {
@@ -61,12 +47,7 @@
 
   .articleDark:hover {
     transform: translateY(-3px);
-    // transform: scale(1.002);
-    // color: grey;
-    // color: #f96c85;
     color: #4f4f4f;
-    // transform: translateY(-2px);
-    // transform: scale(1.02);
   }
 }
 
@@ -74,7 +55,6 @@
   padding: 1.5rem 1.5rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  // background-color: whitesmoke;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   height: 19rem;
@@ -84,8 +64,6 @@
   padding: 1.5rem 1.5rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  // background-color: #4f4f4f;
-  // background-color: #333438;
   background-color: #424242;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -101,16 +79,11 @@
 .blogCard h4 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  // color: #102a42;
 }
 
 .blogCardDark h4 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-}
-
-.description {
-  // color: #324d67;
 }
 
 .blogFooter {
@@ -122,7 +95,6 @@
 .blogFooter p {
   margin-bottom: 0;
   font-weight: bold;
-  // color: #102a42;
 }
 .blogFooter p:first-of-type {
   display: inline-block;
@@ -132,7 +104,6 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
-  // color: #102a42;
 }
 @media screen and (min-width: 576px) {
   .blogImg {

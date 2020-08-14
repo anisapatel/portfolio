@@ -1,18 +1,21 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import switchStyles from "../components/switch.module.scss"
 import { ThemeContext } from "./ThemeProvider"
 import { FaSun, FaMoon } from "react-icons/fa"
 
 const Switch = () => {
+  const [value, setValue] = useState(false)
   const state = useContext(ThemeContext)
 
+  const handleToggle = () => {
+    setValue(!value)
+  }
+
   return (
-    // <div className={switchStyles.switchSection}>
     <>
       <input
         checked={state.theme.type === "dark"}
-        // check={value}
-
+        onChange={handleToggle}
         className={switchStyles.switch}
         id={`react-switch-new`}
         type="checkbox"
@@ -42,7 +45,6 @@ const Switch = () => {
         )}
       </label>
     </>
-    /* </div> */
   )
 }
 

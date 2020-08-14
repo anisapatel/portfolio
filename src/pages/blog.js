@@ -6,7 +6,6 @@ import Head from "../components/head"
 import Blogs from "../components/blogs"
 
 const BlogsPage = () => {
-  // tagged template literal so you can useStaticQuery to query the graphql api
   const data = useStaticQuery(graphql`
     query {
       allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {

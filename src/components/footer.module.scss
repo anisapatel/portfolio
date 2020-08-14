@@ -1,7 +1,4 @@
 .footer {
-  // background: #626262;
-  // background-color: #222;
-  // background-image: linear-gradient(to right, #696969, #7d7d7d);
   background-image: linear-gradient(
     to top,
     #d76d77,
@@ -12,18 +9,16 @@
     #ffffff
   );
 
-  // background-image: linear-gradient(to left, #b86b77, #cf989f);
-
   height: auto;
   text-align: center;
   display: grid;
   place-items: center;
   padding-bottom: 2rem;
   font-size: 16px;
-  // color: #222;
+
   text-decoration: none;
   letter-spacing: 1px;
-  // word-spacing: 2px;
+
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
@@ -32,19 +27,6 @@
 
 .footerDark {
   background: #2c2d30;
-  // background-color: #222;
-  // background-image: linear-gradient(to right, #696969, #7d7d7d);
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   #2c2d30,
-  //   #343a40,
-  //   #414345,
-  //   #304352,
-  //   #2c3e50,
-  //   #182848
-  // );
-
-  // background-image: linear-gradient(to left, #b86b77, #cf989f);
 
   height: auto;
   text-align: center;
@@ -55,7 +37,7 @@
   color: white;
   text-decoration: none;
   letter-spacing: 1px;
-  // word-spacing: 2px;
+
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
@@ -63,11 +45,14 @@
 }
 
 a {
-  // text-decoration: none;
-  // color: white;
   color: white;
 }
 
 a:hover {
   color: #f96c85;
+}
+
+p {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }

@@ -31,10 +31,7 @@ const BlogTemplate = props => {
   const state = useContext(ThemeContext)
 
   const templateStyle = {
-    // marginTop: 0,
     backgroundColor: state.theme.primary,
-    // width: "100%",
-    // height: "60px",
     color: state.theme.text,
   }
   return (

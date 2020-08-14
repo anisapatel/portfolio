@@ -1,5 +1,4 @@
 .section {
-  // padding: 5rem 0rem;
   padding-top: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -11,7 +10,6 @@
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
-  // background-color: #2c2d30;
 }
 
 .underline {
@@ -19,7 +17,6 @@
   text-align: center;
   padding-top: 2rem;
   margin-bottom: 2rem;
-  // color: #102a42;
   font-size: 24px;
 }
 
@@ -29,86 +26,9 @@
   max-width: 1170px;
 }
 
-// .fadeInUp {
-//   -webkit-animation-name: fadeInUp;
-//   animation-name: fadeInUp;
-//   -webkit-animation-duration: 1.5s;
-//   animation-duration: 1.5s;
-//   -webkit-animation-fill-mode: both;
-//   animation-fill-mode: both;
-// }
-
-// @-webkit-keyframes fadeInUp {
-//   0% {
-//     opacity: 0;
-//     -webkit-transform: translate3d(0, 20%, 0);
-//     transform: translate3d(0, 20%, 0);
-//   }
-//   100% {
-//     opacity: 1;
-//     -webkit-transform: none;
-//     transform: none;
-//   }
-// }
-
-// @keyframes fadeInUp {
-//   0% {
-//     opacity: 0;
-//     -webkit-transform: translate3d(0, 20%, 0);
-//     transform: translate3d(0, 20%, 0);
-//   }
-//   100% {
-//     opacity: 1;
-//     -webkit-transform: none;
-//     transform: none;
-//   }
-// }
-
-// /* Simple CSS3 Fade-in Animation */
-// @-webkit-keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-// @-moz-keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-
-// .fadeIn {
-//   opacity: 0;
-//   -webkit-animation: fadeIn ease-out 1.5;
-//   -moz-animation: fadeIn ease-out 1.5;
-//   animation: fadeIn ease-out 1.5;
-
-//   -webkit-animation-fill-mode: backwards;
-//   -moz-animation-fill-mode: backwards;
-//   animation-fill-mode: backwards;
-
-//   -webkit-animation-duration: 1.5s;
-//   -moz-animation-duration: 1.5s;
-//   animation-duration: 1.5s;
-// }
 @media screen and (min-width: 992px) {
   .sectionCenter {
     width: 95vw;
-    // margin: 0 auto;
-    // max-width: 1170px;
   }
 
   .projectsCenter {
@@ -120,7 +40,6 @@
   .underline {
     overflow: hidden;
     text-align: center;
-    // color: #102a42;
     margin-bottom: 3rem;
     font-size: 26px;
     color: #4f4f4f;
@@ -135,7 +54,6 @@
     position: absolute;
     top: 50%;
     border-bottom: 2px solid;
-    // width: 591px; /* half of limiter*/
     width: 160px;
     margin: 0 20px;
   }

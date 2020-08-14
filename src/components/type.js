@@ -10,7 +10,6 @@ const TypeEffect = ({ textToType, delay, loop }) => {
         setCurrentIndex(currentIndex + 1)
       }, delay)
     } else if (loop) {
-      // reset the text and the index
       setText("")
       setCurrentIndex(0)
     }
