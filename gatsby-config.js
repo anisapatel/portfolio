@@ -19,6 +19,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Sacramento`],
+        display: "swap",
+      },
+    },
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
@@ -49,13 +56,6 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         icon: "src/images/circle-cropped.png",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Sacramento`],
-        display: "swap",
       },
     },
   ],

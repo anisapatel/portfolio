@@ -2,24 +2,25 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Helvetica";
+
   // font-family: "Poppins";
   // font-family: "Montserrat", sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  // -ms-text-size-adjust: 100%;
+  // -webkit-text-size-adjust: 100%;
   // text-decoration: none;
   letter-spacing: 1px;
   // word-spacing: 2px;
   // font-weight: normal;
   // font-style: normal;
   // font-variant: normal;
-  text-transform: none;
+  // text-transform: none;
   // background: #2c2d30;
   // color: white;
   // color: black;
 }
 
-.body {
+body {
+  font-family: "Trebuchet MS", "Helvetica";
   // background-color: #2c2d30;
   // background-color: white;
 
@@ -43,8 +44,11 @@
 //   transition: background-color 0.3s, color 0.3s;
 // }
 
-.body {
-  font-family: "Trebuchet MS", "Helvetica";
+html {
+  // font-family: "Trebuchet MS", "Helvetica";
+}
+
+body {
   // font-family: "Montserrat", sans-serif;
 
   // font-family: "Poppins";

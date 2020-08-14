@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Head from "../components/head"
 import templateStyles from "./template.module.scss"
+import { ThemeContext } from "../components/ThemeProvider"
 
 export const query = graphql`
   query($slug: String) {
@@ -27,10 +28,19 @@ const BlogTemplate = props => {
       },
     },
   }
+  const state = useContext(ThemeContext)
+
+  const templateStyle = {
+    // marginTop: 0,
+    backgroundColor: state.theme.primary,
+    // width: "100%",
+    // height: "60px",
+    color: state.theme.text,
+  }
   return (
     <Layout>
       <Head title={props.data.contentfulBlogPost.title} />
-      <section className={templateStyles.section}>
+      <section className={templateStyles.section} style={templateStyle}>
         <div
           className={
             (templateStyles.sectionCenter, templateStyles.templateCenter)
