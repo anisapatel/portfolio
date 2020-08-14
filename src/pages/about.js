@@ -24,7 +24,7 @@ const AboutPage = () => {
         <section className={aboutStyles.section}>
           <div className={(aboutStyles.sectionCenter, aboutStyles.aboutCenter)}>
             <h2 className={aboutStyles.h2} style={about}>
-              <Type textToType=" Hi! I'm Anisa" delay={150} loop={false} />
+              <Type textToType=" Hi! I'm Anisa" delay={100} loop={false} />
             </h2>
             <article className={aboutStyles.text}>
               <p>

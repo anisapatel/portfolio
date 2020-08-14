@@ -135,8 +135,9 @@
 }
 
 .logo {
+  font-family: "Sacramento", cursive;
   padding-top: 0.4rem;
-  font-size: 18px;
+  // font-size: 18px;
   order: 0;
   position: relative;
   text-align: center;
@@ -144,8 +145,8 @@
 }
 
 .title {
-  font-family: "Sacramento", "Trebuchet MS";
-  padding-left: 3.5rem;
+  font-family: "Sacramento", cursive;
+  padding-left: 2.5rem;
   text-decoration: none;
   position: relative;
   transition: 0.5s;
@@ -155,8 +156,8 @@
 }
 
 .titleActive {
-  font-family: "Sacramento", "Trebuchet MS";
-  padding-left: 3.5rem;
+  font-family: "Sacramento", cursive;
+  padding-left: 2.5rem;
   text-decoration: none;
   position: relative;
   transition: 0.5s;
@@ -166,8 +167,8 @@
 }
 
 .titleDark {
-  font-family: "Sacramento", "Trebuchet MS";
-  padding-left: 3.5rem;
+  font-family: "Sacramento", cursive;
+  padding-left: 2.5rem;
   text-decoration: none;
   position: relative;
   transition: 0.5s;
@@ -177,8 +178,8 @@
 }
 
 .titleActiveDark {
-  font-family: "Sacramento", "Trebuchet MS";
-  padding-left: 3.5rem;
+  font-family: "Sacramento", cursive;
+  padding-left: 2.5rem;
   text-decoration: none;
   position: relative;
   transition: 0.5s;
@@ -307,6 +308,7 @@
     width: 96%;
   }
   .logo {
+    font-family: "Sacramento", cursive;
     padding-top: 0.15rem;
     padding-right: 6rem;
 
@@ -325,18 +327,22 @@
 
 @media all and (max-width: 320px) {
   .title {
+    font-family: "Sacramento", cursive;
     padding-left: 1.5rem;
   }
 
   .titleActive {
+    font-family: "Sacramento", cursive;
     padding-left: 1.5rem;
   }
 
   .titleDark {
+    font-family: "Sacramento", cursive;
     padding-left: 1.5rem;
   }
 
   .titleActiveDark {
+    font-family: "Sacramento", cursive;
     padding-left: 1.5rem;
   }
 }
