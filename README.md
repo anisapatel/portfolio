@@ -5,7 +5,7 @@
   Personal portfolio to show personal projects and share blog posts.
 </p>
 <p align="center">
-  Found at <a href="https://anisa.dev" target="_blank">anisa.dev</a>, built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
+  Found at <a href="https://anisa.dev" target="_blank">anisa.dev</a>, built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>, data sourced from <a href="https://www.contentful.com/" target="_blank">Contentful</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
 </p>
 
 ## To run locally
