@@ -52,22 +52,22 @@
 }
 
 .blogCard {
-  padding: 1.5rem 1.5rem;
+  padding: 1rem 1rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  height: 19rem;
+  height: 18rem;
 }
 
 .blogCardDark {
-  padding: 1.5rem 1.5rem;
+  padding: 1rem 1rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-color: #424242;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  height: 19rem;
+  height: 18rem;
 }
 
 .blogImg {
@@ -77,11 +77,15 @@
 }
 
 .blogCard h4 {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .blogCardDark h4 {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -124,5 +128,43 @@
     transition: opacity 500ms ease 0s;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+  }
+  .blogCard {
+    padding: 1.5rem 1.5rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height: 18rem;
+  }
+
+  .blogCardDark {
+    padding: 1.5rem 1.5rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: #424242;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height: 18rem;
+  }
+
+  .blogImg {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 15rem;
+  }
+
+  .blogCard h4 {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .blogCardDark h4 {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
 }

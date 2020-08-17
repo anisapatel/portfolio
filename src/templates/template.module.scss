@@ -1,8 +1,12 @@
 .section {
-  min-height: 100vh;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 6rem;
+}
+
+.blogContent {
+  padding-right: 1rem;
+  font-size: 0.7rem;
 }
 
 .sectionCenter {
@@ -11,7 +15,36 @@
   max-width: 1170px;
 }
 
+.img {
+  z-index: 1;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 9rem;
+}
+
+.h2 {
+  padding-bottom: 0.5rem;
+}
+
+.date {
+  padding-bottom: 0.5rem;
+}
+
 @media screen and (min-width: 992px) {
+  .section {
+    min-height: 100vh;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 8rem;
+    font-family: "Trebuchet MS", Helvetica;
+    width: 95vw;
+    width: 100%;
+  }
+  .blogContent {
+    width: 100%;
+
+    font-size: 1.2rem;
+  }
   .sectionCenter {
     width: 95vw;
   }
@@ -20,6 +53,12 @@
     width: 95vw;
     margin: 0 auto;
     max-width: 800px;
+  }
+  .img {
+    z-index: 1;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 25rem;
   }
 }
 
@@ -34,13 +73,9 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 1.5rem;
 }
 
 h3 {
   font-size: 20px;
-}
-
-p {
-  margin: 0 auto 1.15em;
 }

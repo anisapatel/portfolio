@@ -10,7 +10,7 @@ export const query = graphql`
   query($slug: String) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
-      publishedDate(formatString: "MMMM DD YYYY")
+      publishedDate(formatString: "DD MMMM YYYY")
       body {
         json
       }
@@ -24,9 +24,16 @@ const BlogTemplate = props => {
       "embedded-asset-block": node => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-        return <img alt={alt} src={url} />
+        return <img alt={alt} src={url} className={templateStyles.img} />
       },
     },
+    renderText: text =>
+      text
+        .replace(/\u2028/g, "")
+        .split("\n")
+        .flatMap((text, i) => [i > 0 && <br />, text]),
+    // renderText: text =>
+    //   text.split("\n").flatMap((text, i) => [i > 0 && <br />, text]),
   }
   const state = useContext(ThemeContext)
 
@@ -45,8 +52,12 @@ const BlogTemplate = props => {
         >
           <article className={templateStyles.article}>
             <div className={templateStyles.blogContent}>
-              <h2>{props.data.contentfulBlogPost.title}</h2>
-              <p>{props.data.contentfulBlogPost.publishedDate}</p>
+              <h2 className={templateStyles.h2}>
+                {props.data.contentfulBlogPost.title}
+              </h2>
+              <p className={templateStyles.date}>
+                {props.data.contentfulBlogPost.publishedDate}
+              </p>
               {documentToReactComponents(
                 props.data.contentfulBlogPost.body.json,
                 options
