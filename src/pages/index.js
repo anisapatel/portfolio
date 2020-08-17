@@ -29,7 +29,7 @@ const IndexPage = () => {
           }
         }
       }
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: ASC }) {
         edges {
           node {
             title
