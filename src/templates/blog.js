@@ -5,6 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Head from "../components/head"
 import templateStyles from "./template.module.scss"
 import { ThemeContext } from "../components/ThemeProvider"
+import Image from "gatsby-image"
 
 export const query = graphql`
   query($slug: String) {

@@ -1,6 +1,6 @@
 .section {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 6rem;
 }
 
@@ -19,7 +19,7 @@
   z-index: 1;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  height: 9rem;
+  height: 9.5rem;
 }
 
 .h2 {
@@ -28,6 +28,20 @@
 
 .date {
   padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 375px) {
+  .img {
+    z-index: 1;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 11rem;
+  }
+  .blogContent {
+    padding-right: 0.5rem;
+    font-size: 0.85rem;
+    padding-left: 0.5rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
