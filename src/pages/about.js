@@ -30,8 +30,8 @@ const AboutPage = () => {
               <p>
                 I'm a recently graduated full-stack software developer based in
                 Yorkshire, England. I'm always learning new things and I'm
-                passionate about tech. I'm currently looking for my first dev
-                role, so if you think I'd be a good fit,{" "}
+                passionate about tech for good. I'm currently looking for my
+                first dev role, so if you think I'd be a good fit,{" "}
                 <Link to="/contact" className={aboutStyles.link} style={about}>
                   get in touch
                 </Link>
