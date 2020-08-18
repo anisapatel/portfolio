@@ -3,6 +3,7 @@ import { FaShareSquare, FaGithubSquare } from "react-icons/fa"
 import Image from "gatsby-image"
 import projectStyles from "./project.module.scss"
 import { ThemeContext } from "./ThemeProvider"
+import FadeInSection from "../components/animate"
 
 const Project = ({ description, title, github, url, stack, image, index }) => {
   const state = useContext(ThemeContext)
@@ -36,6 +37,7 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
       >
         <h3 className={projectStyles.title}>{title}</h3>
         <p className={projectStyles.projectDesc}>{description.description}</p>
+
         <div className={projectStyles.projectStack}>
           {stack.map((item, index) => {
             return <span key={index}>{item}</span>
