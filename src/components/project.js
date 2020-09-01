@@ -66,7 +66,13 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
             <div>
               <FaShareSquare className={projectStyles.projectIcon} />
             </div>
-            {title === "Sprout" ? <p>Demo</p> : <p>Live Site</p>}
+            {title === "Sprout" ? (
+              <p>Demo</p>
+            ) : title === "My Portfolio" ? (
+              <p>You are here!</p>
+            ) : (
+              <p>Live Site</p>
+            )}
           </a>
         </div>
       </div>
