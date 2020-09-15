@@ -23,7 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Sacramento`],
-        display: "swap",
+        display: "block",
       },
     },
     {
